@@ -333,10 +333,10 @@ export default function Home() {
               🚀 Skills
             </span>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
-              Technologies I've Mastered
+              Technologies I&apos;ve Mastered
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              Here are some of the key technologies and skills I've acquired:
+              Here are some of the key technologies and skills I&apos;ve acquired:
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -359,7 +359,7 @@ export default function Home() {
               My Professional Journey
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              Here's a glimpse into my professional experience:
+              Here&apos;s a glimpse into my professional experience:
             </p>
 
             <div className="mt-8 space-y-8">
@@ -441,6 +441,7 @@ export default function Home() {
     </Container>
   );
 }
+
 function Gradient() {
   return (
     <>
