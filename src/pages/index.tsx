@@ -89,12 +89,12 @@ const experiences = [
 const achievements = [
   {
     title: "IEEE WCONF 24' Paper Presentation and Publication",
-    description: "My paper titled 'Health Monitoring System based on LightGBM, CatBoost and Explainable Boost Classifier' was presented and published at the international IEEE conference, WCONF 24' The published paper can be viewed below.",
+    description: "My paper titled: Health Monitoring System based on LightGBM, CatBoost and Explainable Boost Classifier was presented and published at the international IEEE conference, WCONF 24' The published paper can be viewed below.",
     href: "https://ieeexplore.ieee.org/document/10692251"
   },
   {
     title: "IEEE TENCON 24' Paper Acceptance",
-    description: "My paper titled 'EcoCoin-An incentivised way to go Green using Amazon Rekognition' has been accepted for the IEEE international conference at Singapore, TENCON 24' (research paper can be viewed below).",
+    description: "My paper titled: EcoCoin-An incentivised way to go Green using Amazon Rekognition has been accepted for the IEEE international conference at Singapore, TENCON 24' (research paper can be viewed below).",
     href: "https://github.com/rux0422/EcoCoin/blob/main/ecocoin/EcoCoin/EcoCoin%20Research%20Paper.pdf.pdf"
   },
   {
