@@ -248,7 +248,7 @@ export default function Home() {
                 data-scroll-speed=".06"
                 className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
               >
-             I am an enthusiastic and results-driven individual with a passion for leveraging cutting-edge technology such as AI, ML and Cloud to deliver meaningful and scalable solutions that drive business value. With a strong foundation in web development, I am constantly seeking opportunities to grow and apply my skills in real-world scenarios. My curiosity and eagerness to learn have pushed me to dive deep into various technologies, from frontend frameworks to backend architecture, and cloud services. My primary interests include AI (Generative AI), ML and Cloud and I'm looking forward to upskill myself in such technologies. I usually develop a holistic approach to problem-solving—ensuring that I don't just focus on functionality, but also on scalability, performance, and user experience.
+             I am an enthusiastic and results-driven individual with a passion for leveraging cutting-edge technology such as AI, ML and Cloud to deliver meaningful and scalable solutions that drive business value. With a strong foundation in web development, I am constantly seeking opportunities to grow and apply my skills in real-world scenarios. My curiosity and eagerness to learn have pushed me to dive deep into various technologies, from frontend frameworks to backend architecture, and cloud services. My primary interests include AI (Generative AI), ML and Cloud and I&apos;m looking forward to upskill myself in such technologies. I usually develop a holistic approach to problem-solving—ensuring that I don&apos;t just focus on functionality, but also on scalability, performance, and user experience.
               </p>
             </div>
             <span
@@ -294,7 +294,7 @@ export default function Home() {
               Innovative solutions for modern challenges.
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              Here are some of the projects I've worked on:
+              Here are some of the projects I&apos;ve worked on:
             </p>
 
             <div className="mt-14 space-y-8">
@@ -324,6 +324,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
 
         {/* Skills */}
         <section id="skills" data-scroll-section>
