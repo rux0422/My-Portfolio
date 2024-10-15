@@ -28,7 +28,7 @@ import { motion } from "framer-motion";
 // Updated projects
 const projects = [
   {
-    title: "EcoCoin - An Incentivized Method to Go Green using Amazon Rekognition (IEEE TENCON 24)",
+    title: "EcoCoin - An Incentivized Method to Go Green using Amazon Rekognition (IEEE TENCON 24')",
     description:
       "A college student app promoting sustainability using AWS services. The app rewards students for eco-friendly actions with redeemable coins. The app utilizes AWS cloud services for secure facial recognition from the photo they upload in the portal and the video of the sustainable activity they perform to ensure authenticity in rewarding eco-friendly activities (github code below).",
     href: "https://github.com/rux0422/EcoCoin/tree/main/ecocoin/EcoCoin",
@@ -46,7 +46,7 @@ const projects = [
     href: "https://github.com/rux0422/airbnb-clone-test/tree/main",
   },
   {
-    title: "Health Monitoring System",
+    title: "Health Monitoring System (IEEE WCONF 24')"
     description:
       "Developed an ensemble ML algorithm to monitor vital parameters combining Explainable Boost Classifier, CatBoost and LightGBM, achieving 99.89% accuracy (github code with certificate and research paper can be viewed below).",
     href: "https://github.com/rux0422/IEEE-WCONF-24-Presentation-Health-Monitoring-System",
@@ -64,7 +64,7 @@ const projects = [
 const skills = [
   "JavaScript", "TypeScript", "React", "Next.js", "Node.js",
   "Express.js", "MongoDB", "PostgreSQL", "AWS", "Docker",
-  "Git", "CI/CD", "Agile Methodologies", "RESTful APIs",
+  "Git", "CI/CD", "CRISPML(Q) Methodologies","RESTful APIs",
    "TailwindCSS", "Python", "Java", "C++"
 ];
 
@@ -257,7 +257,7 @@ export default function Home() {
               data-scroll-speed=".06"
               className="flex flex-row items-center space-x-1.5 pt-6"
             >
-              <Button onClick={() => window.open('https://drive.google.com/file/d/12lKwui3cUfbF5EaRYbr4lrd4CF42lM5l/view?usp=sharing', '_blank')}>
+              <Button onClick={() => window.open('https://drive.google.com/file/d/1EB5g_N2kPIiiYUQD7oNVrEYvv40vdDkY/view?usp=sharing')}>
                 Download Resume <Download className="ml-1 h-4 w-4" />
               </Button>
             </span>
