@@ -36,7 +36,7 @@ const projects = [
   {
     title: "SparkleScript AI",
     description:
-      "An AI-powered content generator that automates blog writing, YouTube scripts, Instagram posts, and more.  Next.js handles the front-end with server-side rendering and static site generation. Prisma ORM and Supabase are employed for backend and database operations. Gemini API 1.5 Flash was integrated to deliver advanced AI capabilities (deployed website and github code below).",
+      "An AI-powered content generator that automates blog writing, YouTube scripts, Instagram posts, and more.  Next.js and Next.js API routes (Clerk for authentication) for API endpoints handles the front-end and backend with server-side rendering and static site generation. Drizzle ORM is employed to handle database operations. Gemini API 1.5 Flash was integrated to deliver advanced AI capabilities (deployed website and github code below).",
     href: "https://sparklescript-ai.vercel.app",
     githubHref: "https://github.com/rux0422/SparkleScript-AI"
   },
