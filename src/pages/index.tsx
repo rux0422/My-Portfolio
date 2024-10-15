@@ -333,7 +333,7 @@ export default function Home() {
               🚀 Skills
             </span>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
-              Technologies I&apos;ve Mastered
+              Technologies I&apos;ve Explored
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
               Here are some of the key technologies and skills I&apos;ve acquired:
