@@ -434,6 +434,18 @@ export default function Home() {
                 <Mail className="mr-2 h-5 w-5" />
                 <span>ruxstudent@gmail.com</span>
               </Link>
+              <div>
+              <Link href="https://github.com/rux0422?tab=repositories" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="icon">
+                  <Github className="h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="https://www.linkedin.com/in/amruthasriram/" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="icon">
+                  <Linkedin className="h-4 w-4" />
+                </Button>
+              </Link>
+              </div>
             </div>
           </div>
         </section>
