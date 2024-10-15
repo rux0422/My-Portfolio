@@ -46,7 +46,7 @@ const projects = [
     href: "https://github.com/rux0422/airbnb-clone-test/tree/main",
   },
   {
-    title: "Health Monitoring System (IEEE WCONF 24')"
+    title: "Health Monitoring System (IEEE WCONF 24')",
     description:
       "Developed an ensemble ML algorithm to monitor vital parameters combining Explainable Boost Classifier, CatBoost and LightGBM, achieving 99.89% accuracy (github code with certificate and research paper can be viewed below).",
     href: "https://github.com/rux0422/IEEE-WCONF-24-Presentation-Health-Monitoring-System",
