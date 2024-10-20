@@ -38,7 +38,7 @@ const projects = [
     title: "QueryBuddy",
     description:
       "A RAG (Retrieval-Augmented Generation) bot that answers questions based on your uploaded document in pdf format.Here, Pinecone is used for storing and retrieving embeddings of the PDF chunks based on similarity to the query and Cohere is used for generating natural language answers by combining the retrieved context from Pinecone with the user’s query.",
-    githubHref: "https://github.com/rux0422/QueryBuddy-RAG-Bot",
+    githubhref: "https://github.com/rux0422/QueryBuddy-RAG-Bot",
     href: "https://ruxquerybuddy.streamlit.app/"
   },
   {
