@@ -31,7 +31,7 @@ const projects = [
     title: "SparkleScript AI",
     description:
       "An AI-powered content generator that automates blog writing, YouTube scripts, Instagram posts, and more.  Next.js and Next.js API routes (Clerk for authentication) for API endpoints handles the front-end and backend with server-side rendering and static site generation. Drizzle ORM is employed to handle database operations. Gemini API 1.5 Flash was integrated to deliver advanced AI capabilities (deployed website and github code below).",
-    githubHref: "https://github.com/rux0422/SparkleScript-AI",
+    githubhref: "https://github.com/rux0422/SparkleScript-AI",
     href: "https://sparklescript-ai.vercel.app"
   },
   {
@@ -320,11 +320,11 @@ export default function Home() {
                     {project.description}
                   </p>
                   <div className="mt-2 space-x-2">
-                    <Link href={project.href} target="_blank">
+                    <Link href={project.githubhref} target="_blank">
                       <Button>Source Code</Button>
                     </Link>
-                    {project.githubHref && (
-                      <Link href={project.githubHref} target="_blank">
+                    {project.href && (
+                      <Link href={project.href} target="_blank">
                         <Button variant="outline">Website</Button>
                       </Link>
                     )}
