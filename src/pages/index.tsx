@@ -306,7 +306,7 @@ export default function Home() {
               ✨ Projects
             </span>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
-              Innovative solutions for modern challenges.
+              Projects I&pos;ve Built
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
               Here are some of the projects I&apos;ve worked on:
@@ -321,11 +321,11 @@ export default function Home() {
                   </p>
                   <div className="mt-2 space-x-2">
                     <Link href={project.href} target="_blank">
-                      <Button>View Project</Button>
+                      <Button>Source Code</Button>
                     </Link>
                     {project.githubHref && (
                       <Link href={project.githubHref} target="_blank">
-                        <Button variant="outline">GitHub</Button>
+                        <Button variant="outline">Website</Button>
                       </Link>
                     )}
                     {project.paperHref && (
