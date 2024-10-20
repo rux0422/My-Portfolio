@@ -319,9 +319,10 @@ export default function Home() {
                 <p className="text-lg text-muted-foreground">
                   {project.description}
                 </p>
+                
                 <div className="mt-2 space-x-2">
                   {(project.githubhref || project.githubHref) && (
-                    <Link href={project.githubhref || project.githubHref} target="_blank" rel="noopener noreferrer">
+                    <Link href={project.githubhref || project.githubHref || '#'} target="_blank" rel="noopener noreferrer">
                       <Button>Source Code</Button>
                     </Link>
                   )}
