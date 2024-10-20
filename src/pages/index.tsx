@@ -31,15 +31,15 @@ const projects = [
     title: "SparkleScript AI",
     description:
       "An AI-powered content generator that automates blog writing, YouTube scripts, Instagram posts, and more.  Next.js and Next.js API routes (Clerk for authentication) for API endpoints handles the front-end and backend with server-side rendering and static site generation. Drizzle ORM is employed to handle database operations. Gemini API 1.5 Flash was integrated to deliver advanced AI capabilities (deployed website and github code below).",
-    href: "https://sparklescript-ai.vercel.app",
-    githubHref: "https://github.com/rux0422/SparkleScript-AI"
+    githubHref: "https://github.com/rux0422/SparkleScript-AI",
+    href: "https://sparklescript-ai.vercel.app"
   },
   {
     title: "QueryBuddy",
     description:
       "A RAG (Retrieval-Augmented Generation) bot that answers questions based on your uploaded document in pdf format.Here, Pinecone is used for storing and retrieving embeddings of the PDF chunks based on similarity to the query and Cohere is used for generating natural language answers by combining the retrieved context from Pinecone with the user’s query.",
-    href: "https://ruxquerybuddy.streamlit.app/",
-    githubHref: "https://github.com/rux0422/QueryBuddy-RAG-Bot"
+    githubHref: "https://github.com/rux0422/QueryBuddy-RAG-Bot",
+    href: "https://ruxquerybuddy.streamlit.app/"
   },
   {
     title: "EcoCoin - An Incentivized Method to Go Green using Amazon Rekognition (IEEE TENCON 24')",
