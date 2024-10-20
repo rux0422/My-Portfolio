@@ -26,13 +26,7 @@ import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 
 // Updated projects
-const projects = [
-  {
-    title: "EcoCoin - An Incentivized Method to Go Green using Amazon Rekognition (IEEE TENCON 24')",
-    description:
-      "A college student app promoting sustainability using AWS services. The app rewards students for eco-friendly actions with redeemable coins. The app utilizes AWS cloud services for secure facial recognition from the photo they upload in the portal and the video of the sustainable activity they perform to ensure authenticity in rewarding eco-friendly activities (github code below).",
-    href: "https://github.com/rux0422/EcoCoin/tree/main/ecocoin/EcoCoin",
-  },
+const projects = [ 
   {
     title: "SparkleScript AI",
     description:
@@ -41,17 +35,38 @@ const projects = [
     githubHref: "https://github.com/rux0422/SparkleScript-AI"
   },
   {
-    title: "Airbnb Homepage Replica",
-    description: "A replica of the Airbnb homepage with login and real-time chat functionality. Next.js and Tailwind CSS were used to develop the frontend (github code below).",
-    href: "https://github.com/rux0422/airbnb-clone-test/tree/main",
+    title: "QueryBuddy",
+    description:
+      "A RAG (Retrieval-Augmented Generation) bot that answers questions based on your uploaded document in pdf format.Here, Pinecone is used for storing and retrieving embeddings of the PDF chunks based on similarity to the query and Cohere is used for generating natural language answers by combining the retrieved context from Pinecone with the user’s query.",
+    href: "https://ruxquerybuddy.streamlit.app/",
+    githubHref: "https://github.com/rux0422/QueryBuddy-RAG-Bot"
   },
   {
+    title: "EcoCoin - An Incentivized Method to Go Green using Amazon Rekognition (IEEE TENCON 24')",
+    description:
+      "A college student app promoting sustainability using AWS services. The app rewards students for eco-friendly actions with redeemable coins. The app utilizes AWS cloud services for secure facial recognition from the photo they upload in the portal and the video of the sustainable activity they perform to ensure authenticity in rewarding eco-friendly activities (github code below).",
+    href: "https://github.com/rux0422/EcoCoin/tree/main/ecocoin/EcoCoin",
+  },
+   {
     title: "Health Monitoring System (IEEE WCONF 24')",
     description:
       "Developed an ensemble ML algorithm to monitor vital parameters combining Explainable Boost Classifier, CatBoost and LightGBM, achieving 99.89% accuracy (github code with certificate and research paper can be viewed below).",
     href: "https://github.com/rux0422/IEEE-WCONF-24-Presentation-Health-Monitoring-System",
     paperHref: "https://ieeexplore.ieee.org/document/10692251"
   },
+  
+  {
+    title: "Airbnb Homepage Replica",
+    description: "A replica of the Airbnb homepage with login and real-time chat functionality. Next.js and Tailwind CSS were used to develop the frontend (github code below).",
+    href: "https://github.com/rux0422/airbnb-clone-test/tree/main",
+  },
+   {
+  title: "Scaleup App Prototype",
+  description: "Built a frontend prototype of an educational app",
+ 
+  href: "https://github.com/rux0422/ScaleUp-App",
+  },
+ 
   {
   title: "Figma UI/UX Screen Design Prototype for a UPI Payment App",
   description: "Designed a Figma prototype for a UPI payment mobile app",
