@@ -312,34 +312,35 @@ export default function Home() {
               Here are some of the projects I&apos;ve worked on:
             </p>
 
-            <div className="mt-14 space-y-8">
-              {projects.map((project) => (
-                <div key={project.title}>
-                  <h3 className="text-2xl font-semibold">{project.title}</h3>
-                  <p className="text-lg text-muted-foreground">
-                    {project.description}
-                  </p>
-                  <div className="mt-2 space-x-2">
+               <div className="mt-14 space-y-8">
+            {projects.map((project) => (
+              <div key={project.title}>
+                <h3 className="text-2xl font-semibold">{project.title}</h3>
+                <p className="text-lg text-muted-foreground">
+                  {project.description}
+                </p>
+                <div className="mt-2 space-x-2">
                   {project.githubhref && (
                     <Link href={project.githubhref} target="_blank" rel="noopener noreferrer">
                       <Button>Source Code</Button>
                     </Link>
-                    {project.href && (
-                      <Link href={project.href} target="_blank">
-                        <Button variant="outline">Website</Button>
-                      </Link>
-                    )}
-                    {project.paperHref && (
-                      <Link href={project.paperHref} target="_blank">
-                        <Button variant="outline">Read Paper</Button>
-                      </Link>
-                    )}
-                  </div>
+                  )}
+                  {project.href && (
+                    <Link href={project.href} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline">Website</Button>
+                    </Link>
+                  )}
+                  {project.paperHref && (
+                    <Link href={project.paperHref} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline">Read Paper</Button>
+                    </Link>
+                  )}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
 
         {/* Skills */}
