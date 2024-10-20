@@ -306,7 +306,7 @@ export default function Home() {
               ✨ Projects
             </span>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
-              Projects I&pos;ve Built
+              Projects I Have Built
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
               Here are some of the projects I&apos;ve worked on:
