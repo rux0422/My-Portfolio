@@ -320,7 +320,8 @@ export default function Home() {
                     {project.description}
                   </p>
                   <div className="mt-2 space-x-2">
-                    <Link href={project.githubhref} target="_blank">
+                  {project.githubhref && (
+                    <Link href={project.githubhref} target="_blank" rel="noopener noreferrer">
                       <Button>Source Code</Button>
                     </Link>
                     {project.href && (
