@@ -312,7 +312,7 @@ export default function Home() {
               Here are some of the projects I&apos;ve worked on:
             </p>
 
-               <div className="mt-14 space-y-8">
+            <div className="mt-14 space-y-8">
             {projects.map((project) => (
               <div key={project.title}>
                 <h3 className="text-2xl font-semibold">{project.title}</h3>
@@ -320,8 +320,8 @@ export default function Home() {
                   {project.description}
                 </p>
                 <div className="mt-2 space-x-2">
-                  {project.githubhref && (
-                    <Link href={project.githubhref} target="_blank" rel="noopener noreferrer">
+                  {(project.githubhref || project.githubHref) && (
+                    <Link href={project.githubhref || project.githubHref} target="_blank" rel="noopener noreferrer">
                       <Button>Source Code</Button>
                     </Link>
                   )}
@@ -341,6 +341,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
 
 
         {/* Skills */}
