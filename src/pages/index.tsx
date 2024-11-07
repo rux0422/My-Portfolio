@@ -356,7 +356,7 @@ export default function Home() {
               Technologies I&apos;ve Explored
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              Here are some of the key technologies and skills I&apos;ve worked om:
+              Here are some of the key technologies and skills I&apos;ve worked on:
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
