@@ -79,7 +79,8 @@ const projects = [
 const skills = [
   "JavaScript", "TypeScript", "React", "Next.js", "AWS",
   "CRISPML(Q) Methodologies","RESTful APIs",
-   "TailwindCSS", "Python", "Java", "C++", "Prisma ORM"
+   "TailwindCSS", "Python", "Java", "C++", "Prisma ORM",
+  "AI/ML", "Exploratory Data Analysis", "
 ];
 
 // Updated experience data with GitHub certificate link
