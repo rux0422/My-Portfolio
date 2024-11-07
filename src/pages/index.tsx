@@ -77,10 +77,9 @@ const projects = [
 
 // New skills data
 const skills = [
-  "JavaScript", "TypeScript", "React", "Next.js", "Node.js",
-  "Express.js", "MongoDB", "PostgreSQL", "AWS", "Docker",
-  "Git", "CI/CD", "CRISPML(Q) Methodologies","RESTful APIs",
-   "TailwindCSS", "Python", "Java", "C++"
+  "JavaScript", "TypeScript", "React", "Next.js", "AWS",
+  "CRISPML(Q) Methodologies","RESTful APIs",
+   "TailwindCSS", "Python", "Java", "C++", "Prisma ORM"
 ];
 
 // Updated experience data with GitHub certificate link
@@ -356,7 +355,7 @@ export default function Home() {
               Technologies I&apos;ve Explored
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              Here are some of the key technologies and skills I&apos;ve acquired:
+              Here are some of the key technologies and skills I&apos;ve worked om:
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
