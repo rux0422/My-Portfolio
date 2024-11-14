@@ -94,7 +94,7 @@ const experiences = [
   },
   {
     company: "Innodatatics",
-    role: "Data Science Intern",
+    role: "Frontend developer Intern",
     duration: "October 2024 - November 2024",
     description: "Worked on creating a HR portal that recruiters use to map interviewers with candidates based on skillset and time availability",
   },
