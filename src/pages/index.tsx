@@ -98,6 +98,13 @@ const experiences = [
     duration: "October 2024 - November 2024",
     description: "Worked on creating a HR portal that recruiters use to map interviewers with candidates based on skillset and time availability",
   },
+
+   {
+    company: "Tangible Trade",
+    role: "React developer",
+    duration: "November 2024 - Present",
+    description: "Working on creating various DeFi and Blockchain based applications",
+  },
 ];
 
 // New achievements data
