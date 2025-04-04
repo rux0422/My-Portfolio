@@ -46,7 +46,7 @@ const projects = [
     description:
       "A college student app promoting sustainability using AWS services. The app rewards students for eco-friendly actions with redeemable coins. The app utilizes AWS cloud services for secure facial recognition from the photo they upload in the portal and the video of the sustainable activity they perform to ensure authenticity in rewarding eco-friendly activities (github code below).",
     githubhref: "https://github.com/rux0422/EcoCoin/tree/main/ecocoin/EcoCoin",
-    paperHref: "https://ieeexplore.ieee.org/document/10692251"
+    paperHref: "https://ieeexplore.ieee.org/document/10902972"
   },
    {
     title: "Health Monitoring System (IEEE WCONF 24')",
