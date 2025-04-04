@@ -46,6 +46,7 @@ const projects = [
     description:
       "A college student app promoting sustainability using AWS services. The app rewards students for eco-friendly actions with redeemable coins. The app utilizes AWS cloud services for secure facial recognition from the photo they upload in the portal and the video of the sustainable activity they perform to ensure authenticity in rewarding eco-friendly activities (github code below).",
     githubhref: "https://github.com/rux0422/EcoCoin/tree/main/ecocoin/EcoCoin",
+    paperHref: "https://ieeexplore.ieee.org/document/10692251"
   },
    {
     title: "Health Monitoring System (IEEE WCONF 24')",
@@ -103,7 +104,7 @@ const experiences = [
     company: "Tangible Trade",
     role: "React developer",
     duration: "November 2024 - Present",
-    description: "Working on creating various DeFi and Blockchain based applications",
+    description: "Working on creating various DeFi and Blockchain based applications using ReactJS"
   },
 ];
 
@@ -115,8 +116,8 @@ const achievements = [
     href: "https://ieeexplore.ieee.org/document/10692251"
   },
   {
-    title: "IEEE TENCON 24' Paper Acceptance",
-    description: "My paper titled: EcoCoin-An incentivised way to go Green using Amazon Rekognition has been accepted for the IEEE international conference at Singapore, TENCON 24' (research paper can be viewed below).",
+    title: "IEEE TENCON 24' Paper Presentation and Publication",
+    description: "My paper titled: EcoCoin-An incentivised way to go Green using Amazon Rekognition was presented and published at the international IEEE conference, TENCON 24' The published paper can be viewed below.",
     href: "https://github.com/rux0422/EcoCoin/blob/main/ecocoin/EcoCoin/EcoCoin%20Research%20Paper.pdf.pdf"
   },
   {
