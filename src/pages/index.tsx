@@ -104,7 +104,7 @@ const experiences = [
     company: "Tangible Trade",
     role: "React developer",
     duration: "November 2024 - Present",
-    description: "Working on developing various DeFi and Blockchain based applications using ReactJS"
+    description: "Working on developing various DeFi and Blockchain based applications using React"
   },
 ];
 
