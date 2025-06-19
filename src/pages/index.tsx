@@ -37,7 +37,7 @@ const projects = [
   {
     title: "QueryBuddy",
     description:
-      "A RAG (Retrieval-Augmented Generation) bot that answers questions based on your uploaded document in pdf format.Here, Pinecone is used for storing and retrieving embeddings of the PDF chunks based on similarity to the query and Cohere is used for generating natural language answers by combining the retrieved context from Pinecone with the user’s query.",
+      "A RAG (Retrieval-Augmented Generation) bot that answers questions based on your uploaded document in pdf format. Pinecone is used for storing and retrieving embeddings of the PDF chunks based on similarity to the query and Cohere is used for generating natural language answers by combining the retrieved context from Pinecone with the user’s query.",
     githubhref: "https://github.com/rux0422/QueryBuddy-RAG-Bot",
     href: "https://ruxquerybuddy.streamlit.app/"
   },
@@ -104,7 +104,7 @@ const experiences = [
     company: "Tangible Trade",
     role: "React developer",
     duration: "November 2024 - Present",
-    description: "Working on creating various DeFi and Blockchain based applications using ReactJS"
+    description: "Working on developing various DeFi and Blockchain based applications using ReactJS"
   },
 ];
 
@@ -280,7 +280,7 @@ export default function Home() {
               data-scroll-speed=".06"
               className="flex flex-row items-center space-x-1.5 pt-6"
             >
-              <Button onClick={() => window.open('https://drive.google.com/file/d/1H1ITwJcYIV-lu1sFFwHhrchsaoqYUPFb/view?usp=sharing')}>
+              <Button onClick={() => window.open('https://drive.google.com/file/d/1eWpLlp8tyggEe-dQ423Ev3VQt0t7gxV2/view?usp=sharing')}>
                 Download Resume <Download className="ml-1 h-4 w-4" />
               </Button>
             </span>
