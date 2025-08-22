@@ -118,7 +118,7 @@ const achievements = [
   {
     title: "IEEE TENCON 24' Paper Presentation and Publication",
     description: "My paper titled: EcoCoin-An incentivised way to go Green using Amazon Rekognition was presented and published at the international IEEE conference, TENCON 24' The published paper can be viewed below.",
-    href: "https://github.com/rux0422/EcoCoin/blob/main/ecocoin/EcoCoin/EcoCoin%20Research%20Paper.pdf.pdf"
+    href: "https://ieeexplore.ieee.org/document/10692251"
   },
   {
     title: "Kaggle Notebook Expert",
