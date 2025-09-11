@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import {
   ChevronRight,
   Github,
-  Kaggle
+  Kaggle,
   Linkedin,
   Download,
   Phone,
