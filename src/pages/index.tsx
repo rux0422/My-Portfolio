@@ -281,7 +281,7 @@ export default function Home() {
               data-scroll-speed=".06"
               className="flex flex-row items-center space-x-1.5 pt-6"
             >
-              <Button onClick={() => window.open('https://drive.google.com/file/d/1eWpLlp8tyggEe-dQ423Ev3VQt0t7gxV2/view?usp=sharing')}>
+              <Button onClick={() => window.open('https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-globalnav-goto')}>
                 Download Resume <Download className="ml-1 h-4 w-4" />
               </Button>
             </span>
