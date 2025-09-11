@@ -476,11 +476,7 @@ export default function Home() {
                     <Linkedin className="h-4 w-4" />
                   </Button>
                 </Link>
-                <Link href="https://www.kaggle.com/amruthasriram" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="icon">
-                    <FaKaggle className="h-4 w-4" />
-                  </Button>
-                </Link>
+                
               </div>
             </div>
           </div>
