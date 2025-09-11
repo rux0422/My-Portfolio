@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import {
   ChevronRight,
   Github,
+  Kaggle,
   Linkedin,
   Download,
   Phone,
@@ -24,7 +25,6 @@ import {
 } from "@/components/ui/carousel";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
-import { FaKaggle } from "react-icons/fa";
 
 // Updated projects
 const projects = [ 
@@ -250,11 +250,6 @@ export default function Home() {
                   <Linkedin className="h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="https://www.kaggle.com/amruthasriram" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="icon">
-                  <FaKaggle className="h-4 w-4" />
-                </Button>
-              </Link>
             </div>
             <div>
               <h1
@@ -357,6 +352,9 @@ export default function Home() {
         </div>
       </section>
 
+
+
+
         {/* Skills */}
         <section id="skills" data-scroll-section>
           <div className="my-64">
@@ -457,7 +455,7 @@ export default function Home() {
           >
             <h2 className="text-3xl font-semibold mb-6">Contact Me</h2>
             <div className="flex flex-col items-center space-y-4">
-              <Link href="tel:+1-309-307-4319" className="flex items-center">
+              <Link href="tel:+13093074319" className="flex items-center">
                 <Phone className="mr-2 h-5 w-5" />
                 <span>+1 (309) 307-4319</span>
               </Link>
@@ -466,17 +464,21 @@ export default function Home() {
                 <span>ruxstudent@gmail.com</span>
               </Link>
               <div className="flex space-x-2">
-                <Link href="https://github.com/rux0422?tab=repositories" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="icon">
-                    <Github className="h-4 w-4" />
-                  </Button>
-                </Link>
-                <Link href="https://www.linkedin.com/in/amruthasriram/" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="icon">
-                    <Linkedin className="h-4 w-4" />
-                  </Button>
-                </Link>
-                
+              <Link href="https://github.com/rux0422?tab=repositories" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="icon">
+                  <Github className="h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="https://www.linkedin.com/in/amruthasriram/" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="icon">
+                  <Linkedin className="h-4 w-4" />
+                </Button>
+              </Link>
+                <Link href="https://www.kaggle.com/amruthasriram" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="icon">
+                  <Kaggle className="h-4 w-4" />
+                </Button>
+              </Link>
               </div>
             </div>
           </div>
