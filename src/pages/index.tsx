@@ -457,7 +457,7 @@ export default function Home() {
             <div className="flex flex-col items-center space-y-4">
               <Link href="tel:+91-7305249607" className="flex items-center">
                 <Phone className="mr-2 h-5 w-5" />
-                <span>+1 (309) 307-4319</span>
+                <span>+1(309)307-4319</span>
               </Link>
               <Link href="mailto:ruxstudent@gmail.com" className="flex items-center">
                 <Mail className="mr-2 h-5 w-5" />
