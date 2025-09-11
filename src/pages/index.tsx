@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import {
   ChevronRight,
   Github,
+  Kaggle
   Linkedin,
   Download,
   Phone,
@@ -456,7 +457,7 @@ export default function Home() {
             <div className="flex flex-col items-center space-y-4">
               <Link href="tel:+91-7305249607" className="flex items-center">
                 <Phone className="mr-2 h-5 w-5" />
-                <span>+91-7305249607</span>
+                <span>+1 (309) 307-4319</span>
               </Link>
               <Link href="mailto:ruxstudent@gmail.com" className="flex items-center">
                 <Mail className="mr-2 h-5 w-5" />
@@ -471,6 +472,11 @@ export default function Home() {
               <Link href="https://www.linkedin.com/in/amruthasriram/" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="icon">
                   <Linkedin className="h-4 w-4" />
+                </Button>
+              </Link>
+                <Link href="https://www.kaggle.com/amruthasriram" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="icon">
+                  <Kaggle className="h-4 w-4" />
                 </Button>
               </Link>
               </div>
