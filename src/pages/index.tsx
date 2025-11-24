@@ -31,7 +31,7 @@ const projects = [
    {
     title: "InsightFlow-Your Intelligent Data Analysis Agent. From Files to Insights, Instantly (supports .pdf, .csv and Excel files)",
     description:
-      "An agent that helps you obtain insights and information from the files you upload. Simply upload your CSV, Excel, or PDF files, and get instant insights or answers to your questions (github source code and video demo link below)".,
+      "An agent that helps you obtain insights and information from the files you upload. Simply upload your CSV, Excel, or PDF files, and get instant insights or answers to your questions. (github source code and video demo link below)",
     githubhref: "https://github.com/rux0422/InsightFlow-Intelligent-Data-Analysis-Agent",
     vidhref: "https://drive.google.com/file/d/1PiBnqeybZKg1kKqh_YzmHRbBYJ2XMKZF/view"
    
@@ -39,14 +39,14 @@ const projects = [
   {
     title: "SparkleScript AI",
     description:
-      "An AI-powered content generator that automates blog writing, YouTube scripts, Instagram posts, and more.  Next.js and Next.js API routes (Clerk for authentication) for API endpoints handles the front-end and backend with server-side rendering and static site generation. Drizzle ORM is employed to handle database operations. Gemini API 1.5 Flash was integrated to deliver advanced AI capabilities (deployed website and github code below).",
+      "An AI-powered content generator that automates blog writing, YouTube scripts, Instagram posts, and more.  Next.js and Next.js API routes (Clerk for authentication) for API endpoints handles the front-end and backend with server-side rendering and static site generation. Drizzle ORM is employed to handle database operations. Gemini API 1.5 Flash was integrated to deliver advanced AI capabilities. (deployed website and github code below)",
     githubhref: "https://github.com/rux0422/SparkleScript-AI",
     href: "https://sparklescript-ai.vercel.app"
   },
   {
     title: "QueryBuddy",
     description:
-      "A RAG (Retrieval-Augmented Generation) bot that answers questions based on your uploaded document in pdf format. Pinecone is used for storing and retrieving embeddings of the PDF chunks based on similarity to the query and Cohere is used for generating natural language answers by combining the retrieved context from Pinecone with the user's query (github source code, video demo link and deployed website below).",
+      "A RAG (Retrieval-Augmented Generation) bot that answers questions based on your uploaded document in pdf format. Pinecone is used for storing and retrieving embeddings of the PDF chunks based on similarity to the query and Cohere is used for generating natural language answers by combining the retrieved context from Pinecone with the user's query. (github source code, video demo link and deployed website below)",
     githubhref: "https://github.com/rux0422/QueryBuddy-RAG-Bot",
     vidhref: "https://www.youtube.com/watch?v=TnIAl9ICmtk"
     href: "https://ruxquerybuddy.streamlit.app/"
