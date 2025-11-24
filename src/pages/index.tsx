@@ -345,7 +345,7 @@ export default function Home() {
                     </Link>
                   )}
                   {(project.vidhref) && (
-                    <Link vidhref={project.vidhref} target="_blank" rel="noopener noreferrer">
+                    <Link href={project.vidhref} target="_blank" rel="noopener noreferrer">
                       <Button>Demo Video</Button>
                     </Link>
                   )}
