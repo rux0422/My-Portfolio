@@ -29,9 +29,9 @@ import { motion } from "framer-motion";
 // Updated projects
 const projects = [ 
    {
-    title: "InsightFlow-Your Intelligent Data Analysis Agent. From Files to Insights, Instantly (supports .pdf, .csv and Excel files)",
+    title: "InsightFlow-Your Intelligent Data Analysis Agent. From Files to Insights, Instantly",
     description:
-      "An agent that helps you obtain insights and information from the files you upload. Simply upload your CSV, Excel, or PDF files, and get instant insights or answers to your questions. Built with Deno runtime and powered by Anthropic Claude AI through the Zypher Agent framework, featuring custom PDF parsing, Papa Parse for CSV processing, SheetJS for Excel files, and JavaScript/HTML5/CSS3 for the frontend. (github source code and video demo link below)",
+      "An agent that helps you obtain insights and information from the files you upload. Simply upload your CSV, Excel, or PDF files, and get instant insights or answers to your questions. Built with Deno runtime and powered by Anthropic's Claude AI through the Zypher Agent framework. Processes PDFs using pdf-parse library and CSV and Excel files with Papa Parse. JavaScript/HTML5/CSS3 is used for the frontend. (github source code and video demo link below)",
     githubhref: "https://github.com/rux0422/InsightFlow-Intelligent-Data-Analysis-Agent",
     vidhref: "https://drive.google.com/file/d/1PiBnqeybZKg1kKqh_YzmHRbBYJ2XMKZF/view"
    
