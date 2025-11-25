@@ -31,7 +31,7 @@ const projects = [
    {
     title: "InsightFlow-Your Intelligent Data Analysis Agent. From Files to Insights, Instantly",
     description:
-      "An agentic tool that helps you obtain insights and information from the files you upload. Simply upload your CSV, Excel, or PDF files, and get instant insights or answers to your questions. Built with Deno runtime and powered by Anthropic's Claude AI through the Zypher Agent framework. Processes PDFs using pdf-parse library and CSV and Excel files with Papa Parse. JavaScript/HTML5/CSS3 is used for the frontend. (github source code and video demo link below)",
+      "An agentic AI tool that helps you obtain insights and information from the files you upload. Simply upload your CSV, Excel, or PDF files, and get instant insights or answers to your questions. Built with Deno runtime and powered by Anthropic's Claude AI through the Zypher Agent framework. Processes PDFs using pdf-parse library and CSV and Excel files with Papa Parse. JavaScript/HTML5/CSS3 is used for the frontend. (github source code and video demo link below)",
     githubhref: "https://github.com/rux0422/InsightFlow-Intelligent-Data-Analysis-Agent",
     vidhref: "https://drive.google.com/file/d/1PiBnqeybZKg1kKqh_YzmHRbBYJ2XMKZF/view"
    
@@ -290,7 +290,7 @@ export default function Home() {
               data-scroll-speed=".06"
               className="flex flex-row items-center space-x-1.5 pt-6"
             >
-              <Button onClick={() => window.open('https://drive.google.com/file/d/1snY5fnH45Xo22Xjjv4StSEpJAb5FsUsZ/view?usp=sharing')}>
+              <Button onClick={() => window.open('https://drive.google.com/file/d/1Ccs55NVWyKXvBj36hVJCcZTpxtM6PALc/view?usp=sharing')}>
                 Download Resume <Download className="ml-1 h-4 w-4" />
               </Button>
             </span>
