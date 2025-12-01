@@ -100,7 +100,7 @@ const experiences = [
     company: "Publicis Sapient",
     role: "Associate Software Developer Intern",
     duration: "June 2023 - July 2023",
-    description: "Built and deployed a performance dashboard for Marriott Bonvoy Homes and Villas. Automated URL extraction and reporting using Lighthouse, Puppeteer. Used AWS S3, DynamoDB for storage, React.js for frontend. Automated with Jenkins, deployed via Docker",
+    description: "Built and deployed a performance dashboard for Marriott Bonvoy Homes and Villas with automated URL extraction and reporting using Lighthouse and Puppeteer. Used AWS S3, DynamoDB for storage and React.js for frontend. The dashboard is automated with Jenkins and deployed via Docker",
     certificateHref: "https://github.com/rux0422/Certifications/blob/main/Publicis%20Sapient%20Internship%20certificate.PNG"
   },
   {
@@ -113,8 +113,8 @@ const experiences = [
    {
     company: "Tangible Trade",
     role: "React developer",
-    duration: "November 2024 - Present",
-    description: "Working on developing various DeFi and Blockchain based applications using React"
+    duration: "November 2024 - December 2025 ",
+    description: "Worked on developing various DeFi and Blockchain based applications using React. Implemented user-friendly dashboards and gamified experiences for trading and staking functionalities. Collaborated with blockchain developers to integrate smart contract functionality and integrated DeFi applications with wallet connections for transaction processing. "
   },
 ];
 
@@ -290,7 +290,7 @@ export default function Home() {
               data-scroll-speed=".06"
               className="flex flex-row items-center space-x-1.5 pt-6"
             >
-              <Button onClick={() => window.open('https://drive.google.com/file/d/1Ccs55NVWyKXvBj36hVJCcZTpxtM6PALc/view?usp=sharing')}>
+              <Button onClick={() => window.open('https://drive.google.com/file/d/1xnAb2yxYKoU8qUL2vsJzDkFh15yNgkf0/view?usp=sharing')}>
                 Download Resume <Download className="ml-1 h-4 w-4" />
               </Button>
             </span>
