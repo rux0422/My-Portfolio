@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import {
   ChevronRight,
   Github,
+
   Linkedin,
   Download,
   Phone,
@@ -93,7 +94,6 @@ const skills = [
   "AI/ML", "Exploratory Data Analysis"
 ];
 
-// Updated experience data with experienceLetterHref for Tangible Trade
 const experiences = [
   {
     company: "Publicis Sapient",
@@ -391,7 +391,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Experience */}
+       {/* Experience */}
         <section id="experience" data-scroll-section>
           <div className="my-64">
             <span className="text-gradient clash-grotesk text-sm font-semibold tracking-tighter">
@@ -419,7 +419,7 @@ export default function Home() {
                     )}
                     {exp.experienceLetterHref && (
                       <Link href={exp.experienceLetterHref} target="_blank" rel="noopener noreferrer">
-                        <Button>View Experience Letter</Button>
+                        <Button variant="outline">View Experience Letter</Button>
                       </Link>
                     )}
                   </div>
@@ -447,7 +447,7 @@ export default function Home() {
                 <div key={achievement.title} className="rounded-lg bg-card p-6 shadow-sm">
                   <h3 className="text-2xl font-semibold">{achievement.title}</h3>
                   <p className="mt-2 text-base">{achievement.description}</p>
-                  <Link href={achievement.href} target="_blank" rel="noopener noreferrer">
+                  <Link href={achievement.href} target="_blank">
                     <Button className="mt-2">Learn More</Button>
                   </Link>
                 </div>
@@ -456,7 +456,7 @@ export default function Home() {
 
            {/* Updated Certifications Link */}
            <div className="mt-40">
-              <Link href="https://github.com/rux0422/Certifications" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/rux0422/Certifications" target="_blank">
                 <Button variant="default" className="w-full py-6 text-lg font-semibold">
                   View All Certifications
                 </Button>
