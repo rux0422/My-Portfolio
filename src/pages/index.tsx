@@ -101,7 +101,7 @@ const experiences = [
     role: "Associate Software Developer Intern",
     duration: "June 2023 - July 2023",
     description: "Built and deployed a performance dashboard for Marriott Bonvoy Homes and Villas with automated URL extraction and reporting using Lighthouse and Puppeteer. Used AWS S3, DynamoDB for storage and React.js for frontend. The dashboard is automated with Jenkins and deployed via Docker",
-    certificateHref: "https://github.com/rux0422/Certifications/blob/main/Publicis%20Sapient%20Internship%20certificate.PNG"
+    certificateHref: "https://drive.google.com/file/d/16rcxckfEGH6vRrqbRjkXnXezVat7CyS-/view?usp=sharing"
   },
   {
     company: "Innodatatics",
