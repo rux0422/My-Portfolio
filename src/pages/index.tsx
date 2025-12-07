@@ -350,12 +350,12 @@ export default function Home() {
                   )}
                   {project.href && (
                     <Link href={project.href} target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline">Website</Button>
+                      <Button>Website</Button>
                     </Link>
                   )}
                   {project.paperHref && (
                     <Link href={project.paperHref} target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline">Read Paper</Button>
+                      <Button>Read Paper</Button>
                     </Link>
                   )}
                 </div>
@@ -419,7 +419,7 @@ export default function Home() {
                     )}
                     {exp.experienceLetterHref && (
                       <Link href={exp.experienceLetterHref} target="_blank" rel="noopener noreferrer">
-                        <Button variant="outline">View Experience Letter</Button>
+                        <Button>View Experience Letter</Button>
                       </Link>
                     )}
                   </div>
@@ -448,7 +448,7 @@ export default function Home() {
                   <h3 className="text-2xl font-semibold">{achievement.title}</h3>
                   <p className="mt-2 text-base">{achievement.description}</p>
                   <Link href={achievement.href} target="_blank">
-                    <Button className="mt-2">Learn More</Button>
+                    <Button className="mt-2">View Credential</Button>
                   </Link>
                 </div>
               ))}
