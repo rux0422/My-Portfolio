@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import {
   ChevronRight,
   Github,
-
   Linkedin,
   Download,
   Phone,
@@ -94,7 +93,7 @@ const skills = [
   "AI/ML", "Exploratory Data Analysis"
 ];
 
-// Updated experience data with GitHub certificate link
+// Updated experience data with experienceLetterHref for Tangible Trade
 const experiences = [
   {
     company: "Publicis Sapient",
@@ -109,12 +108,12 @@ const experiences = [
     duration: "October 2024 - November 2024",
     description: "Worked on creating a HR portal that recruiters use to map interviewers with candidates based on skillset and time availability",
   },
-
    {
     company: "Tangible Trade",
     role: "React developer",
     duration: "November 2024 - December 2025 ",
-    description: "Worked on developing various DeFi and Blockchain based applications using React. Implemented user-friendly dashboards and gamified experiences for trading and staking functionalities. Collaborated with blockchain developers to integrate smart contract functionality and integrated DeFi applications with wallet connections for transaction processing. "
+    description: "Worked on developing various DeFi and Blockchain based applications using React. Implemented user-friendly dashboards and gamified experiences for trading and staking functionalities. Collaborated with blockchain developers to integrate smart contract functionality and integrated DeFi applications with wallet connections for transaction processing. ",
+    experienceLetterHref: "https://drive.google.com/file/d/1dv2MWMmrmW29Mlzo46PlmM2LVnticKst/view?usp=sharing"
   },
 ];
 
@@ -412,11 +411,18 @@ export default function Home() {
                   <p className="text-lg font-medium text-primary">{exp.role}</p>
                   <p className="text-sm text-muted-foreground">{exp.duration}</p>
                   <p className="mt-2 text-base">{exp.description}</p>
-                  {exp.certificateHref && (
-                    <Link href={exp.certificateHref} target="_blank">
-                      <Button className="mt-2">View Certificate</Button>
-                    </Link>
-                  )}
+                  <div className="mt-2 space-x-2">
+                    {exp.certificateHref && (
+                      <Link href={exp.certificateHref} target="_blank" rel="noopener noreferrer">
+                        <Button>View Certificate</Button>
+                      </Link>
+                    )}
+                    {exp.experienceLetterHref && (
+                      <Link href={exp.experienceLetterHref} target="_blank" rel="noopener noreferrer">
+                        <Button>View Experience Letter</Button>
+                      </Link>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
@@ -441,7 +447,7 @@ export default function Home() {
                 <div key={achievement.title} className="rounded-lg bg-card p-6 shadow-sm">
                   <h3 className="text-2xl font-semibold">{achievement.title}</h3>
                   <p className="mt-2 text-base">{achievement.description}</p>
-                  <Link href={achievement.href} target="_blank">
+                  <Link href={achievement.href} target="_blank" rel="noopener noreferrer">
                     <Button className="mt-2">Learn More</Button>
                   </Link>
                 </div>
@@ -450,7 +456,7 @@ export default function Home() {
 
            {/* Updated Certifications Link */}
            <div className="mt-40">
-              <Link href="https://github.com/rux0422/Certifications" target="_blank">
+              <Link href="https://github.com/rux0422/Certifications" target="_blank" rel="noopener noreferrer">
                 <Button variant="default" className="w-full py-6 text-lg font-semibold">
                   View All Certifications
                 </Button>
