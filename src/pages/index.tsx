@@ -39,7 +39,7 @@ const projects = [
   {
     title: "SparkleScript AI",
     description:
-      "An AI-powered content generator that automates blog writing, YouTube scripts, Instagram posts, and more.  Next.js and Next.js API routes (Clerk for authentication) for API endpoints handles the front-end and backend with server-side rendering and static site generation. Drizzle ORM is employed to handle database operations. Gemini API 1.5 Flash was integrated to deliver advanced AI capabilities. (deployed website and github code below)",
+      "An AI-powered content generator that automates blog writing, YouTube scripts, Instagram posts, and more.  Next.js and Next.js API routes (Clerk for authentication) for API endpoints handles the front-end and backend with server-side rendering and static site generation. Drizzle ORM is employed to handle database operations. Gemini API 2.5 Flash was integrated to deliver advanced AI capabilities. (deployed website and github code below)",
     githubhref: "https://github.com/rux0422/SparkleScript-AI",
     href: "https://sparklescript-ai.vercel.app"
   },
@@ -54,7 +54,7 @@ const projects = [
   {
     title: "EcoCoin - An Incentivized Method to Go Green using Amazon Rekognition (IEEE TENCON 24')",
     description:
-      "A college student app promoting sustainability using AWS services. The app rewards students for eco-friendly actions with redeemable coins. The app utilizes AWS cloud services for secure facial recognition from the photo they upload in the portal and the video of the sustainable activity they perform to ensure authenticity in rewarding eco-friendly activities (github code below).",
+      "A college student app (prototype) promoting sustainability using AWS services. The app rewards students for eco-friendly actions with redeemable coins. The app utilizes AWS cloud services for secure facial recognition from the photo they upload in the portal and the video of the sustainable activity they perform to ensure authenticity in rewarding eco-friendly activities (github code below).",
     githubhref: "https://github.com/rux0422/EcoCoin/tree/main/ecocoin/EcoCoin",
     paperHref: "https://ieeexplore.ieee.org/document/10902972"
   },
@@ -289,7 +289,7 @@ export default function Home() {
               data-scroll-speed=".06"
               className="flex flex-row items-center space-x-1.5 pt-6"
             >
-              <Button onClick={() => window.open('https://drive.google.com/file/d/1xnAb2yxYKoU8qUL2vsJzDkFh15yNgkf0/view?usp=sharing')}>
+              <Button onClick={() => window.open('https://drive.google.com/file/d/1NJJ1afchuT1Jwkh0F_ZJC9GJibzPABe_/view?usp=sharing')}>
                 Download Resume <Download className="ml-1 h-4 w-4" />
               </Button>
             </span>
