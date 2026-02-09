@@ -51,6 +51,14 @@ const projects = [
     vidhref: "https://www.youtube.com/watch?v=TnIAl9ICmtk",
     href: "https://ruxquerybuddy.streamlit.app/"
   },
+   {
+    title: "3D Word Cloud Visualizer",
+    description:
+      "An interactive web application that visualizes article topics as a stunning 3D word cloud. Enter any article URL and watch as keywords, named entities, and statistics come to life in an immersive 3D space. (github source code and video demo link below)",
+    githubhref: "https://github.com/rux0422/3D-Word-Cloud-Amrutha",
+    vidhref: "https://drive.google.com/file/d/1D81BBw3MKkHFDnywkbbr9mOf0Rn6kj9t/view?usp=sharing"
+    
+  },
   {
     title: "EcoCoin: A Mobile App for Sustainable Actions (IEEE TENCON 24')",
     description:
