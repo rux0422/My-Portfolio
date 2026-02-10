@@ -39,8 +39,9 @@ const projects = [
   {
     title: "SparkleScript AI",
     description:
-      "An AI-powered content generator that automates blog writing, YouTube scripts, Instagram posts, and more.  Next.js and Next.js API routes (Clerk for authentication) for API endpoints handles the front-end and backend with server-side rendering and static site generation. Drizzle ORM is employed to handle database operations. Gemini API 2.5 Flash was integrated to deliver advanced AI capabilities. (deployed website and github code below)",
+      "An AI-powered content generator that automates blog writing, YouTube scripts, Instagram posts, and more.  Next.js and Next.js API routes (Clerk for authentication) for API endpoints handles the front-end and backend with server-side rendering and static site generation. Drizzle ORM is employed to handle database operations. Gemini API 2.5 Flash was integrated to deliver advanced AI capabilities. (deployed website, demo video and github code below)",
     githubhref: "https://github.com/rux0422/SparkleScript-AI",
+    vidhref: "https://drive.google.com/file/d/1X1oMWBpn-lsfBultCxO4MihbEi4bdYOZ/view?usp=sharing"
     href: "https://sparklescript-ai.vercel.app"
   },
   {
