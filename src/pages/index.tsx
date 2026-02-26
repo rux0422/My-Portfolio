@@ -5,11 +5,12 @@ import { Button } from "@/components/ui/button";
 import {
   ChevronRight,
   Github,
-
   Linkedin,
   Download,
   Phone,
-  Mail
+  Mail,
+  Menu,
+  X,
 } from "lucide-react";
 import { TriangleDownIcon } from "@radix-ui/react-icons";
 import Spline from "@splinetool/react-spline";
@@ -24,25 +25,24 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import VanillaTilt from "vanilla-tilt";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 // Updated projects
-const projects = [ 
-   {
+const projects = [
+  {
     title: "InsightFlow-Your Intelligent Data Analysis Agent. From Files to Insights, Instantly",
     description:
       "An agentic AI tool that helps you obtain insights and information from the files you upload. Simply upload your CSV, Excel, or PDF files, and get instant insights or answers to your questions. Built with Deno runtime and powered by Anthropic's Claude AI through the Zypher Agent framework. Processes PDFs using pdf-parse library and CSV and Excel files with Papa Parse. JavaScript/HTML5/CSS3 is used for the frontend. (github source code and video demo link below)",
     githubhref: "https://github.com/rux0422/InsightFlow-Intelligent-Data-Analysis-Agent",
-    vidhref: "https://drive.google.com/file/d/1PiBnqeybZKg1kKqh_YzmHRbBYJ2XMKZF/view"
-   
+    vidhref: "https://drive.google.com/file/d/1PiBnqeybZKg1kKqh_YzmHRbBYJ2XMKZF/view",
   },
   {
     title: "SparkleScript AI",
     description:
-      "An AI-powered content generator that automates blog writing, YouTube scripts, Instagram posts, and more.  Next.js and Next.js API routes (Clerk for authentication) for API endpoints handles the front-end and backend with server-side rendering and static site generation. Drizzle ORM is employed to handle database operations. Gemini API 2.5 Flash was integrated to deliver advanced AI capabilities. (deployed website, demo video and github code below)",
+      "An AI-powered content generator that automates blog writing, YouTube scripts, Instagram posts, and more. Next.js and Next.js API routes (Clerk for authentication) for API endpoints handles the front-end and backend with server-side rendering and static site generation. Drizzle ORM is employed to handle database operations. Gemini API 2.5 Flash was integrated to deliver advanced AI capabilities. (deployed website, demo video and github code below)",
     githubhref: "https://github.com/rux0422/SparkleScript-AI",
     vidhref: "https://drive.google.com/file/d/1X1oMWBpn-lsfBultCxO4MihbEi4bdYOZ/view?usp=sharing",
-    href: "https://sparklescript-ai.vercel.app"
+    href: "https://sparklescript-ai.vercel.app",
   },
   {
     title: "QueryBuddy",
@@ -50,57 +50,64 @@ const projects = [
       "A RAG (Retrieval-Augmented Generation) bot that answers questions based on your uploaded document in pdf format. Pinecone is used for storing and retrieving embeddings of the PDF chunks based on similarity to the query and Cohere is used for generating natural language answers by combining the retrieved context from Pinecone with the user's query. (github source code, video demo link and deployed website below)",
     githubhref: "https://github.com/rux0422/QueryBuddy-RAG-Bot",
     vidhref: "https://www.youtube.com/watch?v=TnIAl9ICmtk",
-    href: "https://ruxquerybuddy.streamlit.app/"
+    href: "https://ruxquerybuddy.streamlit.app/",
   },
-   {
+  {
     title: "3D Word Cloud Visualizer",
     description:
       "An interactive web application that visualizes article topics as a stunning 3D word cloud. Enter any article URL and watch as keywords, named entities, and statistics come to life in an immersive 3D space. (github source code and video demo link below)",
     githubhref: "https://github.com/rux0422/3D-Word-Cloud-Amrutha",
-    vidhref: "https://drive.google.com/file/d/1D81BBw3MKkHFDnywkbbr9mOf0Rn6kj9t/view?usp=sharing"
-    
+    vidhref: "https://drive.google.com/file/d/1D81BBw3MKkHFDnywkbbr9mOf0Rn6kj9t/view?usp=sharing",
   },
   {
     title: "EcoCoin: A Mobile App for Sustainable Actions (IEEE TENCON 24')",
     description:
       "A college student app (prototype) promoting sustainability using AWS services. The app rewards students for eco-friendly actions with redeemable coins. The app utilizes AWS cloud services for secure facial recognition from the photo they upload in the portal and the video of the sustainable activity they perform to ensure authenticity in rewarding eco-friendly activities (github code below).",
     githubhref: "https://github.com/rux0422/EcoCoin/tree/main/ecocoin/EcoCoin",
-    paperHref: "https://ieeexplore.ieee.org/document/10902972"
+    paperHref: "https://ieeexplore.ieee.org/document/10902972",
   },
-   {
+  {
     title: "Health Monitoring System (IEEE WCONF 24')",
     description:
       "Developed an ensemble ML algorithm to monitor vital parameters combining Explainable Boost Classifier, CatBoost and LightGBM, achieving 99.89% accuracy (github code with certificate and research paper can be viewed below).",
     githubhref: "https://github.com/rux0422/IEEE-WCONF-24-Presentation-Health-Monitoring-System",
-    paperHref: "https://ieeexplore.ieee.org/document/10692251"
+    paperHref: "https://ieeexplore.ieee.org/document/10692251",
   },
-  
   {
     title: "Airbnb Homepage Replica",
-    description: "A replica of the Airbnb homepage with login and real-time chat functionality. Next.js and Tailwind CSS were used to develop the frontend (github code below).",
+    description:
+      "A replica of the Airbnb homepage with login and real-time chat functionality. Next.js and Tailwind CSS were used to develop the frontend (github code below).",
     githubhref: "https://github.com/rux0422/airbnb-clone-test/tree/main",
   },
-   {
-  title: "Scaleup App Prototype",
-  description: "Built a frontend prototype of an educational app",
- 
-  githubhref: "https://github.com/rux0422/ScaleUp-App",
-  },
- 
   {
-  title: "Figma UI/UX Screen Design Prototype for a UPI Payment App",
-  description: "Designed a Figma prototype for a UPI payment mobile app",
- 
-  githubhref: "https://www.figma.com/design/sTySzEg8nsa1Jd7GTfQOav/Untitled?node-id=0-1&node-type=canvas",
+    title: "Scaleup App Prototype",
+    description: "Built a frontend prototype of an educational app",
+    githubhref: "https://github.com/rux0422/ScaleUp-App",
+  },
+  {
+    title: "Figma UI/UX Screen Design Prototype for a UPI Payment App",
+    description: "Designed a Figma prototype for a UPI payment mobile app",
+    githubhref:
+      "https://www.figma.com/design/sTySzEg8nsa1Jd7GTfQOav/Untitled?node-id=0-1&node-type=canvas",
   },
 ];
 
 // New skills data
 const skills = [
-  "JavaScript", "TypeScript", "React", "Next.js", "AWS",
-  "CRISPML(Q) Methodologies","RESTful APIs",
-   "TailwindCSS", "Python", "Java", "C++", "Prisma ORM",
-  "AI/ML", "Exploratory Data Analysis"
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "AWS",
+  "CRISPML(Q) Methodologies",
+  "RESTful APIs",
+  "TailwindCSS",
+  "Python",
+  "Java",
+  "C++",
+  "Prisma ORM",
+  "AI/ML",
+  "Exploratory Data Analysis",
 ];
 
 const experiences = [
@@ -108,21 +115,26 @@ const experiences = [
     company: "Publicis Sapient",
     role: "Associate Software Developer Intern",
     duration: "June 2023 - July 2023",
-    description: "Built and deployed a performance dashboard for Marriott Bonvoy Homes and Villas with automated URL extraction and reporting using Lighthouse and Puppeteer. Used AWS S3, DynamoDB for storage and React.js for frontend. The dashboard is automated with Jenkins and deployed via Docker",
-    certificateHref: "https://drive.google.com/file/d/16rcxckfEGH6vRrqbRjkXnXezVat7CyS-/view?usp=sharing"
+    description:
+      "Built and deployed a performance dashboard for Marriott Bonvoy Homes and Villas with automated URL extraction and reporting using Lighthouse and Puppeteer. Used AWS S3, DynamoDB for storage and React.js for frontend. The dashboard is automated with Jenkins and deployed via Docker",
+    certificateHref:
+      "https://drive.google.com/file/d/16rcxckfEGH6vRrqbRjkXnXezVat7CyS-/view?usp=sharing",
   },
   {
     company: "Innodatatics",
     role: "Frontend developer Intern",
     duration: "October 2024 - November 2024",
-    description: "Worked on creating a HR portal that recruiters use to map interviewers with candidates based on skillset and time availability",
+    description:
+      "Worked on creating a HR portal that recruiters use to map interviewers with candidates based on skillset and time availability",
   },
-   {
+  {
     company: "Tangible Trade",
     role: "React developer",
-    duration: "November 2024 - December 2025 ",
-    description: "Worked on developing various DeFi and Blockchain based applications using React. Implemented user-friendly dashboards and gamified experiences for trading and staking functionalities. Collaborated with blockchain developers to integrate smart contract functionality and integrated DeFi applications with wallet connections for transaction processing. ",
-    experienceLetterHref: "https://drive.google.com/file/d/1dv2MWMmrmW29Mlzo46PlmM2LVnticKst/view?usp=sharing"
+    duration: "November 2024 - December 2025",
+    description:
+      "Worked on developing various DeFi and Blockchain based applications using React. Implemented user-friendly dashboards and gamified experiences for trading and staking functionalities. Collaborated with blockchain developers to integrate smart contract functionality and integrated DeFi applications with wallet connections for transaction processing.",
+    experienceLetterHref:
+      "https://drive.google.com/file/d/1dv2MWMmrmW29Mlzo46PlmM2LVnticKst/view?usp=sharing",
   },
 ];
 
@@ -130,24 +142,28 @@ const experiences = [
 const achievements = [
   {
     title: "IEEE WCONF 24' Paper Presentation and Publication",
-    description: "My paper titled: Health Monitoring System based on LightGBM, CatBoost and Explainable Boost Classifier was presented and published at the international IEEE conference, WCONF 24' The published paper can be viewed below.",
-    href: "https://ieeexplore.ieee.org/document/10692251"
+    description:
+      "My paper titled: Health Monitoring System based on LightGBM, CatBoost and Explainable Boost Classifier was presented and published at the international IEEE conference, WCONF 24' The published paper can be viewed below.",
+    href: "https://ieeexplore.ieee.org/document/10692251",
   },
   {
     title: "IEEE TENCON 24' Paper Presentation and Publication",
-    description: "My paper titled: EcoCoin-An incentivised way to go Green using Amazon Rekognition was presented and published at the international IEEE conference, TENCON 24' The published paper can be viewed below.",
-    href: "https://ieeexplore.ieee.org/document/10902972"
+    description:
+      "My paper titled: EcoCoin-An incentivised way to go Green using Amazon Rekognition was presented and published at the international IEEE conference, TENCON 24' The published paper can be viewed below.",
+    href: "https://ieeexplore.ieee.org/document/10902972",
   },
   {
     title: "Kaggle Notebook Expert",
-    description: "Became a Kaggle Notebook expert by utilising Machine Learning algorithms for performing predictive analysis on datasets.",
-    href: "https://www.kaggle.com/amruthasriram"
+    description:
+      "Became a Kaggle Notebook expert by utilising Machine Learning algorithms for performing predictive analysis on datasets.",
+    href: "https://www.kaggle.com/amruthasriram",
   },
   {
     title: "Summer Analytics Course - IIT Guwahati",
-    description: "Completed the Summer Analytics Course offered by the Consulting and Analytics Club of IIT Guwahati.",
-    href: "https://certificate.givemycertificate.com/c/8d13b576-9501-4a1a-b539-feda9298527b"
-  }
+    description:
+      "Completed the Summer Analytics Course offered by the Consulting and Analytics Club of IIT Guwahati.",
+    href: "https://certificate.givemycertificate.com/c/8d13b576-9501-4a1a-b539-feda9298527b",
+  },
 ];
 
 export default function Home() {
@@ -156,6 +172,7 @@ export default function Home() {
   const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
   const [current, setCurrent] = useState<number>(0);
   const [count, setCount] = useState<number>(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // handle scroll
   useEffect(() => {
@@ -222,6 +239,10 @@ export default function Home() {
     });
   }, []);
 
+  const handleNavClick = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <Container>
       <div ref={refScrollContainer}>
@@ -229,10 +250,12 @@ export default function Home() {
 
         {/* Navigation Bar */}
         <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
-          <div className="container mx-auto px-6 py-3">
+          <div className="container mx-auto px-4 sm:px-6 py-3">
             <div className="flex items-center justify-between">
               <div className="text-2xl font-bold">AS</div>
-              <div className="space-x-4">
+
+              {/* Desktop Nav Links — hidden on mobile */}
+              <div className="hidden md:flex space-x-4">
                 <a href="#home" className="nav-link">Home</a>
                 <a href="#projects" className="nav-link">Projects</a>
                 <a href="#skills" className="nav-link">Skills</a>
@@ -240,15 +263,50 @@ export default function Home() {
                 <a href="#achievements" className="nav-link">Achievements</a>
                 <a href="#contact" className="nav-link">Contact</a>
               </div>
+
+              {/* Mobile Hamburger Button — hidden on desktop */}
+              <button
+                className="md:hidden p-2 rounded-md focus:outline-none"
+                onClick={() => setMobileMenuOpen((prev) => !prev)}
+                aria-label="Toggle menu"
+              >
+                {mobileMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
+              </button>
             </div>
           </div>
+
+          {/* Mobile Dropdown Menu */}
+          <AnimatePresence>
+            {mobileMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.2 }}
+                className="md:hidden bg-background/95 backdrop-blur-sm border-t border-border overflow-hidden"
+              >
+                <div className="flex flex-col px-4 py-3 space-y-3">
+                  <a href="#home" className="nav-link py-2" onClick={handleNavClick}>Home</a>
+                  <a href="#projects" className="nav-link py-2" onClick={handleNavClick}>Projects</a>
+                  <a href="#skills" className="nav-link py-2" onClick={handleNavClick}>Skills</a>
+                  <a href="#experience" className="nav-link py-2" onClick={handleNavClick}>Experience</a>
+                  <a href="#achievements" className="nav-link py-2" onClick={handleNavClick}>Achievements</a>
+                  <a href="#contact" className="nav-link py-2" onClick={handleNavClick}>Contact</a>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </nav>
 
         {/* Intro */}
         <section
           id="home"
           data-scroll-section
-          className="mt-40 flex w-full flex-col items-center xl:mt-0 xl:min-h-screen xl:flex-row xl:justify-between"
+          className="mt-24 sm:mt-32 md:mt-40 flex w-full flex-col items-center xl:mt-0 xl:min-h-screen xl:flex-row xl:justify-between"
         >
           <div className={styles.intro}>
             <div
@@ -275,11 +333,11 @@ export default function Home() {
                 data-scroll-speed=".06"
                 data-scroll-direction="horizontal"
               >
-                <span className="text-6xl tracking-tighter text-foreground 2xl:text-8xl">
+                <span className="text-4xl sm:text-5xl tracking-tighter text-foreground 2xl:text-8xl xl:text-6xl">
                   Hello, I&apos;m
                   <br />
                 </span>
-                <span className="clash-grotesk text-gradient text-6xl 2xl:text-8xl">
+                <span className="clash-grotesk text-gradient text-4xl sm:text-5xl 2xl:text-8xl xl:text-6xl">
                   Amruthavarshini Sriram.
                 </span>
               </h1>
@@ -287,9 +345,9 @@ export default function Home() {
                 data-scroll
                 data-scroll-enable-touch-speed
                 data-scroll-speed=".06"
-                className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
+                className="mt-1 max-w-lg tracking-tight text-muted-foreground text-sm sm:text-base 2xl:text-xl"
               >
-             I am an enthusiastic and results-driven individual with a passion for leveraging cutting-edge technology such as AI, ML and Cloud to deliver meaningful and scalable solutions that drive business value. With a strong foundation in web development, I am constantly seeking opportunities to grow and apply my skills in real-world scenarios. My curiosity and eagerness to learn have pushed me to dive deep into various technologies, from frontend frameworks to backend architecture, and cloud services. My primary interests include AI (Generative AI and Agentic AI), ML and Cloud and I&apos;m looking forward to upskill myself in such technologies. I usually develop a holistic approach to problem-solving—ensuring that I don&apos;t just focus on functionality, but also on scalability, performance, and user experience.
+                I am an enthusiastic and results-driven individual with a passion for leveraging cutting-edge technology such as AI, ML and Cloud to deliver meaningful and scalable solutions that drive business value. With a strong foundation in web development, I am constantly seeking opportunities to grow and apply my skills in real-world scenarios. My curiosity and eagerness to learn have pushed me to dive deep into various technologies, from frontend frameworks to backend architecture, and cloud services. My primary interests include AI (Generative AI and Agentic AI), ML and Cloud and I&apos;m looking forward to upskill myself in such technologies. I usually develop a holistic approach to problem-solving—ensuring that I don&apos;t just focus on functionality, but also on scalability, performance, and user experience.
               </p>
             </div>
             <span
@@ -298,7 +356,7 @@ export default function Home() {
               data-scroll-speed=".06"
               className="flex flex-row items-center space-x-1.5 pt-6"
             >
-              <Button onClick={() => window.open('https://drive.google.com/file/d/1NJJ1afchuT1Jwkh0F_ZJC9GJibzPABe_/view?usp=sharing')}>
+              <Button onClick={() => window.open("https://drive.google.com/file/d/1NJJ1afchuT1Jwkh0F_ZJC9GJibzPABe_/view?usp=sharing")}>
                 Download Resume <Download className="ml-1 h-4 w-4" />
               </Button>
             </span>
@@ -317,7 +375,7 @@ export default function Home() {
             data-scroll
             data-scroll-speed="-.01"
             id={styles["canvas-container"]}
-            className="mt-14 h-full w-full xl:mt-0"
+            className="mt-10 h-64 w-full sm:h-80 md:h-96 xl:mt-0 xl:h-full"
           >
             <Suspense fallback={<span>Loading...</span>}>
               <Spline scene="/assets/scene.splinecode" />
@@ -327,72 +385,72 @@ export default function Home() {
 
         {/* Projects */}
         <section id="projects" data-scroll-section>
-          <div className="my-20">
+          <div className="my-16 sm:my-20">
             <span className="text-gradient clash-grotesk text-sm font-semibold tracking-tighter">
               ✨ Projects
             </span>
-            <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
+            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
               Projects I Have Built
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
               Here are some of the projects I&apos;ve worked on:
             </p>
 
-            <div className="mt-14 space-y-8">
-            {projects.map((project) => (
-              <div key={project.title}>
-                <h3 className="text-2xl font-semibold">{project.title}</h3>
-                <p className="text-lg text-muted-foreground">
-                  {project.description}
-                </p>
-                
-                <div className="mt-2 space-x-2">
-                  {(project.githubhref) && (
-                    <Link href={project.githubhref} target="_blank" rel="noopener noreferrer">
-                      <Button>Source Code</Button>
-                    </Link>
-                  )}
-                  {(project.vidhref) && (
-                    <Link href={project.vidhref} target="_blank" rel="noopener noreferrer">
-                      <Button>Demo Video</Button>
-                    </Link>
-                  )}
-                  {project.href && (
-                    <Link href={project.href} target="_blank" rel="noopener noreferrer">
-                      <Button>Website</Button>
-                    </Link>
-                  )}
-                  {project.paperHref && (
-                    <Link href={project.paperHref} target="_blank" rel="noopener noreferrer">
-                      <Button>Read Paper</Button>
-                    </Link>
-                  )}
+            <div className="mt-10 sm:mt-14 space-y-8">
+              {projects.map((project) => (
+                <div key={project.title}>
+                  <h3 className="text-xl sm:text-2xl font-semibold">{project.title}</h3>
+                  <p className="mt-1 text-base sm:text-lg text-muted-foreground">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {project.githubhref && (
+                      <Link href={project.githubhref} target="_blank" rel="noopener noreferrer">
+                        <Button size="sm" className="text-xs sm:text-sm">Source Code</Button>
+                      </Link>
+                    )}
+                    {project.vidhref && (
+                      <Link href={project.vidhref} target="_blank" rel="noopener noreferrer">
+                        <Button size="sm" className="text-xs sm:text-sm">Demo Video</Button>
+                      </Link>
+                    )}
+                    {project.href && (
+                      <Link href={project.href} target="_blank" rel="noopener noreferrer">
+                        <Button size="sm" className="text-xs sm:text-sm">Website</Button>
+                      </Link>
+                    )}
+                    {project.paperHref && (
+                      <Link href={project.paperHref} target="_blank" rel="noopener noreferrer">
+                        <Button size="sm" className="text-xs sm:text-sm">Read Paper</Button>
+                      </Link>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-
-
-
+        </section>
 
         {/* Skills */}
         <section id="skills" data-scroll-section>
-          <div className="my-64">
+          <div className="my-24 sm:my-32 md:my-40 lg:my-64">
             <span className="text-gradient clash-grotesk text-sm font-semibold tracking-tighter">
               🚀 Skills
             </span>
-            <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
+            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
               Technologies I&apos;ve Explored
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
               Here are some of the key technologies and skills I&apos;ve worked on:
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
               {skills.map((skill) => (
-                <span key={skill} className="rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+                <span
+                  key={skill}
+                  className="rounded-full bg-primary/10 px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium text-primary"
+                >
                   {skill}
                 </span>
               ))}
@@ -400,35 +458,35 @@ export default function Home() {
           </div>
         </section>
 
-       {/* Experience */}
+        {/* Experience */}
         <section id="experience" data-scroll-section>
-          <div className="my-64">
+          <div className="my-24 sm:my-32 md:my-40 lg:my-64">
             <span className="text-gradient clash-grotesk text-sm font-semibold tracking-tighter">
               💼 Experience
             </span>
-            <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
+            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
               My Professional Journey
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
               Here&apos;s a glimpse into my professional experience:
             </p>
 
-            <div className="mt-8 space-y-8">
+            <div className="mt-8 space-y-6 sm:space-y-8">
               {experiences.map((exp) => (
-                <div key={exp.company} className="rounded-lg bg-card p-6 shadow-sm">
-                  <h3 className="text-2xl font-semibold">{exp.company}</h3>
-                  <p className="text-lg font-medium text-primary">{exp.role}</p>
+                <div key={exp.company} className="rounded-lg bg-card p-4 sm:p-6 shadow-sm">
+                  <h3 className="text-xl sm:text-2xl font-semibold">{exp.company}</h3>
+                  <p className="text-base sm:text-lg font-medium text-primary">{exp.role}</p>
                   <p className="text-sm text-muted-foreground">{exp.duration}</p>
-                  <p className="mt-2 text-base">{exp.description}</p>
-                  <div className="mt-2 space-x-2">
+                  <p className="mt-2 text-sm sm:text-base">{exp.description}</p>
+                  <div className="mt-3 flex flex-wrap gap-2">
                     {exp.certificateHref && (
                       <Link href={exp.certificateHref} target="_blank" rel="noopener noreferrer">
-                        <Button>View Certificate</Button>
+                        <Button size="sm" className="text-xs sm:text-sm">View Certificate</Button>
                       </Link>
                     )}
                     {exp.experienceLetterHref && (
                       <Link href={exp.experienceLetterHref} target="_blank" rel="noopener noreferrer">
-                        <Button>View Experience Letter</Button>
+                        <Button size="sm" className="text-xs sm:text-sm">View Experience Letter</Button>
                       </Link>
                     )}
                   </div>
@@ -440,33 +498,33 @@ export default function Home() {
 
         {/* Achievements */}
         <section id="achievements" data-scroll-section>
-          <div className="my-64">
+          <div className="my-24 sm:my-32 md:my-40 lg:my-64">
             <span className="text-gradient clash-grotesk text-sm font-semibold tracking-tighter">
               🏆 Achievements
             </span>
-            <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
+            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
               Milestones and Recognitions
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
               Here are some of my notable achievements:
             </p>
 
-            <div className="mt-8 space-y-8">
+            <div className="mt-8 space-y-6 sm:space-y-8">
               {achievements.map((achievement) => (
-                <div key={achievement.title} className="rounded-lg bg-card p-6 shadow-sm">
-                  <h3 className="text-2xl font-semibold">{achievement.title}</h3>
-                  <p className="mt-2 text-base">{achievement.description}</p>
+                <div key={achievement.title} className="rounded-lg bg-card p-4 sm:p-6 shadow-sm">
+                  <h3 className="text-xl sm:text-2xl font-semibold">{achievement.title}</h3>
+                  <p className="mt-2 text-sm sm:text-base">{achievement.description}</p>
                   <Link href={achievement.href} target="_blank">
-                    <Button className="mt-2">View Credential</Button>
+                    <Button size="sm" className="mt-3 text-xs sm:text-sm">View Credential</Button>
                   </Link>
                 </div>
               ))}
             </div>
 
-           {/* Updated Certifications Link */}
-           <div className="mt-40">
+            {/* Updated Certifications Link */}
+            <div className="mt-16 sm:mt-24 md:mt-32 lg:mt-40">
               <Link href="https://github.com/rux0422/Certifications" target="_blank">
-                <Button variant="default" className="w-full py-6 text-lg font-semibold">
+                <Button variant="default" className="w-full py-4 sm:py-6 text-base sm:text-lg font-semibold">
                   View All Certifications
                 </Button>
               </Link>
@@ -475,35 +533,34 @@ export default function Home() {
         </section>
 
         {/* Updated Contact Me Section */}
-        <section id="contact" data-scroll-section className="my-64">
+        <section id="contact" data-scroll-section className="my-24 sm:my-32 md:my-40 lg:my-64">
           <div
             data-scroll
             data-scroll-speed=".4"
             data-scroll-position="top"
-            className="flex flex-col items-center justify-center rounded-lg bg-gradient-to-br from-primary/[6.5%] to-white/5 px-8 py-16 text-center xl:py-24"
+            className="flex flex-col items-center justify-center rounded-lg bg-gradient-to-br from-primary/[6.5%] to-white/5 px-6 sm:px-8 py-12 sm:py-16 text-center xl:py-24"
           >
-            <h2 className="text-3xl font-semibold mb-6">Contact Me</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold mb-6">Contact Me</h2>
             <div className="flex flex-col items-center space-y-4">
-              <Link href="tel:+13093074319" className="flex items-center">
-                <Phone className="mr-2 h-5 w-5" />
+              <Link href="tel:+13093074319" className="flex items-center text-sm sm:text-base">
+                <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 <span>+1 (309) 307-4319</span>
               </Link>
-              <Link href="mailto:ruxstudent@gmail.com" className="flex items-center">
-                <Mail className="mr-2 h-5 w-5" />
+              <Link href="mailto:ruxstudent@gmail.com" className="flex items-center text-sm sm:text-base">
+                <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 <span>ruxstudent@gmail.com</span>
               </Link>
               <div className="flex space-x-2">
-              <Link href="https://github.com/rux0422?tab=repositories" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="icon">
-                  <Github className="h-4 w-4" />
-                </Button>
-              </Link>
-              <Link href="https://www.linkedin.com/in/amruthasriram/" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="icon">
-                  <Linkedin className="h-4 w-4" />
-                </Button>
-              </Link>
-                
+                <Link href="https://github.com/rux0422?tab=repositories" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" size="icon">
+                    <Github className="h-4 w-4" />
+                  </Button>
+                </Link>
+                <Link href="https://www.linkedin.com/in/amruthasriram/" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" size="icon">
+                    <Linkedin className="h-4 w-4" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
