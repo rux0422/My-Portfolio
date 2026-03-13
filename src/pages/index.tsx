@@ -128,7 +128,7 @@ const experiences = [
       "Worked on creating a HR portal that recruiters use to map interviewers with candidates based on skillset and time availability",
   },
   {
-    company: "Tangible Trade",
+    company: "Tangible Trade (Dezoir Tech Labs)",
     role: "React developer",
     duration: "November 2024 - December 2025",
     description:
@@ -356,7 +356,7 @@ export default function Home() {
               data-scroll-speed=".06"
               className="flex flex-row items-center space-x-1.5 pt-6"
             >
-              <Button onClick={() => window.open("https://drive.google.com/file/d/1r4GQAB5RAy4lD3vx4gcud9XRnO_TQFnx/view?usp=sharing")}>
+              <Button onClick={() => window.open("https://drive.google.com/file/d/1o-Wc8vBwqNs4ce_nuXiWQa_4Bg1_RVJC/view?usp=sharing")}>
                 Download Resume <Download className="ml-1 h-4 w-4" />
               </Button>
             </span>
