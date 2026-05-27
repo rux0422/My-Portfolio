@@ -98,7 +98,7 @@ const skills = [
   "Playwright MCP Server",
   "Claude Code",
   "Github Copilot",
-  "Cursor"
+  "Cursor",
   "JavaScript",
   "TypeScript",
   "React",
