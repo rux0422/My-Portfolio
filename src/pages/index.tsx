@@ -94,13 +94,16 @@ const projects = [
 
 // New skills data
 const skills = [
+  "Playwright testing",
+  "Playwright MCP Server",
+  "Claude Code",
+  "Github Copilot",
+  "Cursor"
   "JavaScript",
   "TypeScript",
   "React",
   "Next.js",
-  "AWS",
-  "CRISPML(Q) Methodologies",
-  "RESTful APIs",
+  "AWS Cloud services",
   "TailwindCSS",
   "Python",
   "Java",
@@ -439,10 +442,10 @@ export default function Home() {
               🚀 Skills
             </span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
-              Technologies I&apos;ve Explored
+              Tools and Technologies I&apos;ve Explored
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              Here are some of the key technologies and skills I&apos;ve worked on:
+              Here are some of the key tools, technologies and skills I&apos;ve worked on:
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
