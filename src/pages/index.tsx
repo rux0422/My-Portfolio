@@ -27,21 +27,48 @@ import {
 import VanillaTilt from "vanilla-tilt";
 import { motion, AnimatePresence } from "framer-motion";
 
+// Project type — explicit so optional link keys compile cleanly
+type Project = {
+  title: string;
+  description: string;
+  githubhref?: string;
+  vidhref?: string;
+  href?: string;
+  paperHref?: string;
+  figmaHref?: string;
+  docHref?: string;
+};
+
 // Updated projects
-const projects = [
+const projects: Project[] = [
   {
-    title: "InsightFlow-Your Intelligent Data Analysis Agent. From Files to Insights, Instantly",
+    title:
+      "State Farm Authenticated Experience — UI/UX Case Studies (Figma)",
+    description:
+      "A four-part concept case-study series redesigning State Farm's authenticated digital experience: registration & onboarding, a contextual AI assistant with claims triage, a multi-policy home dashboard, and intelligent coverage recommendations. 23 high-fidelity mobile and desktop screens designed in Figma on a reusable design-token and component library (variants, auto layout), grounded in statefarm.com's live information architecture and brand — with user stories and acceptance criteria, IA/flow and AI-triage architecture, content design in brand voice, and WCAG-AA-minded UI across loading, empty, and error states. (Figma file and full case-study document below)",
+    figmaHref:
+      "https://www.figma.com/design/5ugk0W6wW69tKXiZ9rl4mw/Statefarm-UI-UX-Case-studies?node-id=1-2138",
+    // TODO: upload StateFarm-CaseStudies-Client-Document.pdf to Google Drive
+    // (share: anyone with the link) and replace the placeholder below.
+    docHref: "https://drive.google.com/REPLACE-WITH-YOUR-UPLOADED-PDF-LINK",
+  },
+  {
+    title:
+      "InsightFlow-Your Intelligent Data Analysis Agent. From Files to Insights, Instantly",
     description:
       "An agentic AI tool that helps you obtain insights and information from the files you upload. Simply upload your CSV, Excel, or PDF files, and get instant insights or answers to your questions. Built with Deno runtime and powered by Anthropic's Claude AI through the Zypher Agent framework. Processes PDFs using pdf-parse library and CSV and Excel files with Papa Parse. JavaScript/HTML5/CSS3 is used for the frontend. (github source code and video demo link below)",
-    githubhref: "https://github.com/rux0422/InsightFlow-Intelligent-Data-Analysis-Agent",
-    vidhref: "https://drive.google.com/file/d/1PiBnqeybZKg1kKqh_YzmHRbBYJ2XMKZF/view",
+    githubhref:
+      "https://github.com/rux0422/InsightFlow-Intelligent-Data-Analysis-Agent",
+    vidhref:
+      "https://drive.google.com/file/d/1PiBnqeybZKg1kKqh_YzmHRbBYJ2XMKZF/view",
   },
   {
     title: "SparkleScript AI",
     description:
       "An AI-powered content generator that automates blog writing, YouTube scripts, Instagram posts, and more. Next.js and Next.js API routes (Clerk for authentication) for API endpoints handles the front-end and backend with server-side rendering and static site generation. Drizzle ORM is employed to handle database operations. Gemini API 2.5 Flash was integrated to deliver advanced AI capabilities. (deployed website, demo video and github code below)",
     githubhref: "https://github.com/rux0422/SparkleScript-AI",
-    vidhref: "https://drive.google.com/file/d/1X1oMWBpn-lsfBultCxO4MihbEi4bdYOZ/view?usp=sharing",
+    vidhref:
+      "https://drive.google.com/file/d/1X1oMWBpn-lsfBultCxO4MihbEi4bdYOZ/view?usp=sharing",
     href: "https://sparklescript-ai.vercel.app",
   },
   {
@@ -57,7 +84,8 @@ const projects = [
     description:
       "An interactive web application that visualizes article topics as a stunning 3D word cloud. Enter any article URL and watch as keywords, named entities, and statistics come to life in an immersive 3D space. (github source code and video demo link below)",
     githubhref: "https://github.com/rux0422/3D-Word-Cloud-Amrutha",
-    vidhref: "https://drive.google.com/file/d/1D81BBw3MKkHFDnywkbbr9mOf0Rn6kj9t/view?usp=sharing",
+    vidhref:
+      "https://drive.google.com/file/d/1D81BBw3MKkHFDnywkbbr9mOf0Rn6kj9t/view?usp=sharing",
   },
   {
     title: "EcoCoin: A Mobile App for Sustainable Actions (IEEE TENCON 24')",
@@ -70,7 +98,8 @@ const projects = [
     title: "Health Monitoring System (IEEE WCONF 24')",
     description:
       "Developed an ensemble ML algorithm to monitor vital parameters combining Explainable Boost Classifier, CatBoost and LightGBM, achieving 99.89% accuracy (github code with certificate and research paper can be viewed below).",
-    githubhref: "https://github.com/rux0422/IEEE-WCONF-24-Presentation-Health-Monitoring-System",
+    githubhref:
+      "https://github.com/rux0422/IEEE-WCONF-24-Presentation-Health-Monitoring-System",
     paperHref: "https://ieeexplore.ieee.org/document/10692251",
   },
   {
@@ -92,8 +121,16 @@ const projects = [
   },
 ];
 
-// New skills data
+// Skills — UI/UX first (aligned to the UX Designer role), then engineering
 const skills = [
+  "UI/UX Design",
+  "Figma (Design Systems, Components & Variants)",
+  "Wireframing & Prototyping",
+  "Content & Action Hierarchy",
+  "Design Tokens & Auto Layout",
+  "Accessibility (WCAG AA)",
+  "Responsive Design",
+  "User Stories & UX Flows",
   "Playwright testing",
   "Playwright MCP Server",
   "Claude Code",
@@ -350,7 +387,10 @@ export default function Home() {
                 data-scroll-speed=".06"
                 className="mt-1 max-w-lg tracking-tight text-muted-foreground text-sm sm:text-base 2xl:text-xl"
               >
-                I am an enthusiastic and results-driven individual with a passion for leveraging cutting-edge technology such as AI, ML and Cloud to deliver meaningful and scalable solutions that drive business value. With a strong foundation in web development, I am constantly seeking opportunities to grow and apply my skills in real-world scenarios. My curiosity and eagerness to learn have pushed me to dive deep into various technologies, from frontend frameworks to backend architecture, testing frameworks like Playwright, Playwright MCP Server and cloud services. My primary interests include AI (Generative AI and Agentic AI), ML and Cloud and I&apos;m looking forward to upskill myself in such technologies. I usually develop a holistic approach to problem-solving—ensuring that I don&apos;t just focus on functionality, but also on scalability, performance, and user experience.
+               Software engineer and UI/UX designer with a foundation in frontend development (React.js, Node.js) and hands-on experience designing
+               customer-facing dashboards, onboarding and authentication flows, and AI-integrated product experiences. Brings systems thinking across
+               large, interconnected products, with deep interest in Generative and Agentic AI, ML, and Cloud and software testing using Playwright
+               and Playwright MCP server.
               </p>
             </div>
             <span
@@ -408,6 +448,16 @@ export default function Home() {
                   </p>
 
                   <div className="mt-3 flex flex-wrap gap-2">
+                    {project.figmaHref && (
+                      <Link href={project.figmaHref} target="_blank" rel="noopener noreferrer">
+                        <Button size="sm" className="text-xs sm:text-sm">Figma File</Button>
+                      </Link>
+                    )}
+                    {project.docHref && (
+                      <Link href={project.docHref} target="_blank" rel="noopener noreferrer">
+                        <Button size="sm" className="text-xs sm:text-sm">Case Study Document</Button>
+                      </Link>
+                    )}
                     {project.githubhref && (
                       <Link href={project.githubhref} target="_blank" rel="noopener noreferrer">
                         <Button size="sm" className="text-xs sm:text-sm">Source Code</Button>
