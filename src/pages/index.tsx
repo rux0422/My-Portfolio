@@ -39,24 +39,22 @@ type Project = {
   docHref?: string;
 };
 
-// Updated projects
+// Projects — titles, descriptions, and links synced with the resume
 const projects: Project[] = [
   {
     title:
-      "State Farm Authenticated Experience — UI/UX Case Studies (Figma)",
+      "Onboarding and Authentication (statefarm.com) — Screen Designs (Figma)",
     description:
-      "A four-part concept case-study series redesigning State Farm's authenticated digital experience: registration & onboarding, a contextual AI assistant with claims triage, a multi-policy home dashboard, and intelligent coverage recommendations. 23 high-fidelity mobile and desktop screens designed in Figma on a reusable design-token and component library (variants, auto layout), grounded in statefarm.com's live information architecture and brand — with user stories and acceptance criteria, IA/flow and AI-triage architecture, content design in brand voice, and WCAG-AA-minded UI across loading, empty, and error states. (Figma file and full case-study document below)",
+      "Four concept case studies: registration & onboarding, AI assistant & claims triage, dashboard, and coverage recommendations. Designed 23 mobile screens across 4 case studies in Figma, built on a reusable component library (variants, auto layout) grounded in statefarm.com's IA and brand. (Figma file below)",
     figmaHref:
       "https://www.figma.com/design/5ugk0W6wW69tKXiZ9rl4mw/Statefarm-UI-UX-Case-studies?node-id=1-2138",
-    // TODO: upload StateFarm-CaseStudies-Client-Document.pdf to Google Drive
-    // (share: anyone with the link) and replace the placeholder below.
-    docHref: "https://drive.google.com/REPLACE-WITH-YOUR-UPLOADED-PDF-LINK",
   },
-   {
-    title: "Figma UI/UX Screen Design Prototype for a UPI Payment App",
-    description: "Designed a Figma prototype for a UPI payment mobile app",
-    githubhref:
-      "https://www.figma.com/design/sTySzEg8nsa1Jd7GTfQOav/Untitled?node-id=0-1&node-type=canvas",
+  {
+    title: "UPI Payment App — Figma UI/UX Design Prototype",
+    description:
+      "Designed mobile UI screens and payment flows in Figma for a UPI payment application prototype. (Figma file below)",
+    figmaHref:
+      "https://www.figma.com/design/sTySzEg8nsa1Jd7GTfQOav/Untitled?node-id=0-1",
   },
   {
     title:
@@ -119,36 +117,36 @@ const projects: Project[] = [
     description: "Built a frontend prototype of an educational app",
     githubhref: "https://github.com/rux0422/ScaleUp-App",
   },
- 
 ];
 
-// Skills — UI/UX first (aligned to the UX Designer role), then engineering
+// Skills — synced with the resume's Technical Skills and Interests section
 const skills = [
-  "UI/UX Design",
-  "Figma (Design Systems, Components & Variants)",
-  "Wireframing & Prototyping",
-  "Content & Action Hierarchy",
-  "Design Tokens & Auto Layout",
-  "Accessibility (WCAG AA)",
-  "Responsive Design",
-  "User Stories & UX Flows",
-  "Playwright testing",
-  "Playwright MCP Server",
-  "Claude Code",
-  "Github Copilot",
-  "Cursor",
+  "Figma",
+  "Wireframing",
+  "Design Systems",
+  "Responsive UI",
+  "Python",
   "JavaScript",
   "TypeScript",
-  "React",
-  "Next.js",
-  "AWS Cloud services",
-  "TailwindCSS",
-  "Python",
-  "Java",
   "C++",
-  "Prisma ORM",
+  "Java",
+  "HTML",
+  "CSS",
+  "Node.js",
+  "React.js",
+  "Next.js",
+  "Playwright (E2E Testing)",
+  "Playwright MCP",
+  "AWS",
+  "Docker",
+  "CI/CD (Jenkins, GitLab)",
+  "Git",
+  "MySQL",
+  "Claude Code",
+  "Cursor",
+  "GitHub Copilot",
   "AI/ML",
-  "Exploratory Data Analysis",
+  "Cloud computing",
 ];
 
 const experiences = [
@@ -388,10 +386,15 @@ export default function Home() {
                 data-scroll-speed=".06"
                 className="mt-1 max-w-lg tracking-tight text-muted-foreground text-sm sm:text-base 2xl:text-xl"
               >
-               Software engineer and UI/UX designer with a foundation in frontend development (React.js, Node.js) and hands-on experience designing
-               customer-facing dashboards, onboarding and authentication flows, and AI-integrated product experiences. Brings systems thinking across
-               large, interconnected products, with deep interest in Generative and Agentic AI, ML, and Cloud and software testing using Playwright
-               and Playwright MCP server.
+                Software engineer and UI/UX designer with a foundation in
+                frontend development (React.js, Typescript, Javascript) and
+                hands-on experience designing customer-facing dashboards and
+                AI-integrated applications. Strong aesthetics and creativity
+                in UI design to enrich UX. Strong focus in building highly
+                functional applications using emerging technologies with a
+                deep interest in Generative and Agentic AI, ML, cloud
+                computing and software testing using Playwright and Playwright
+                MCP server.
               </p>
             </div>
             <span
