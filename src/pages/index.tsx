@@ -48,10 +48,8 @@ const projects: Project[] = [
       "Four concept case studies: registration & onboarding, AI assistant & claims triage, dashboard, and coverage recommendations. Designed 23 mobile screens across 4 case studies in Figma, built on a reusable component library (variants, auto layout) grounded in statefarm.com's IA and brand. (Figma file and case study document below)",
     figmaHref:
       "https://www.figma.com/design/5ugk0W6wW69tKXiZ9rl4mw/Statefarm-UI-UX-Case-studies?node-id=1-2138",
-    // ⚠️ REQUIRED BEFORE DEPLOY: upload StateFarm-CaseStudies-Client-Document.pdf
-    // to Google Drive, set sharing to "Anyone with the link", then replace the
-    // placeholder below with your Drive share link (same pattern as your demo videos).
-    docHref: "https://drive.google.com/REPLACE-WITH-YOUR-UPLOADED-PDF-LINK",
+    
+    docHref: "https://drive.google.com/file/d/1Ji-fytONd6TNjmozQXJqcldzPLGnTaaG/view?usp=sharing",
   },
   {
     title: "UPI Payment App — Figma UI/UX Design Prototype",
