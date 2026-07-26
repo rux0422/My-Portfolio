@@ -52,6 +52,12 @@ const projects: Project[] = [
     // (share: anyone with the link) and replace the placeholder below.
     docHref: "https://drive.google.com/REPLACE-WITH-YOUR-UPLOADED-PDF-LINK",
   },
+   {
+    title: "Figma UI/UX Screen Design Prototype for a UPI Payment App",
+    description: "Designed a Figma prototype for a UPI payment mobile app",
+    githubhref:
+      "https://www.figma.com/design/sTySzEg8nsa1Jd7GTfQOav/Untitled?node-id=0-1&node-type=canvas",
+  },
   {
     title:
       "InsightFlow-Your Intelligent Data Analysis Agent. From Files to Insights, Instantly",
@@ -113,12 +119,7 @@ const projects: Project[] = [
     description: "Built a frontend prototype of an educational app",
     githubhref: "https://github.com/rux0422/ScaleUp-App",
   },
-  {
-    title: "Figma UI/UX Screen Design Prototype for a UPI Payment App",
-    description: "Designed a Figma prototype for a UPI payment mobile app",
-    githubhref:
-      "https://www.figma.com/design/sTySzEg8nsa1Jd7GTfQOav/Untitled?node-id=0-1&node-type=canvas",
-  },
+ 
 ];
 
 // Skills — UI/UX first (aligned to the UX Designer role), then engineering
