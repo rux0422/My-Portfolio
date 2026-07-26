@@ -45,7 +45,7 @@ const projects: Project[] = [
     title:
       "Onboarding and Authentication (statefarm.com) — Screen Designs (Figma)",
     description:
-      "Four concept case studies: registration & onboarding, AI assistant & claims triage, dashboard, and coverage recommendations. Designed 23 mobile screens across 4 case studies in Figma, built on a reusable component library (variants, auto layout) grounded in statefarm.com's IA and brand. (Figma file below)",
+      "Four concept case studies: registration & onboarding, AI assistant & claims triage, dashboard, and coverage recommendations. Designed 23 mobile screens across 4 case studies in Figma, built on a reusable component library grounded in statefarm.com's IA and brand. (Figma file below)",
     figmaHref:
       "https://www.figma.com/design/5ugk0W6wW69tKXiZ9rl4mw/Statefarm-UI-UX-Case-studies?node-id=1-2138",
   },
