@@ -159,7 +159,7 @@ const skills = [
 const experiences = [
   {
     company: "FrostyFlake (Curley Enterprises LLC)",
-    role: "Applied AI/ML Engineer (Contract)",
+    role: "Applied AI/ML Engineer",
     duration: "August 2026 - Present",
     location: "Remote-Wyoming, USA",
     description:
