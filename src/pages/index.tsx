@@ -1,3 +1,4 @@
+import Container from "@/components/Container";
 import { useEffect, useRef, Suspense, useState } from "react";
 import styles from "@/styles/Home.module.css";
 import { Button } from "@/components/ui/button";
@@ -255,7 +256,7 @@ export default function Home() {
       navLinks.forEach((li) => {
         li.classList.remove("nav-active");
 
-        if (li.getAttribute("href") === #${current}) {
+        if (li.getAttribute("href") === "#" + current) { {
           li.classList.add("nav-active");
         }
       });
