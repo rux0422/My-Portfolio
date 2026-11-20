@@ -256,7 +256,7 @@ export default function Home() {
       navLinks.forEach((li) => {
         li.classList.remove("nav-active");
 
-        if (li.getAttribute("href") === "#" + current) { {
+       if (li.getAttribute("href") === "#" + current) {
           li.classList.add("nav-active");
         }
       });
