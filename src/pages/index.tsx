@@ -1,4 +1,47 @@
+import { useEffect, useRef, Suspense, useState } from "react";
+import styles from "@/styles/Home.module.css";
+import { Button } from "@/components/ui/button";
+import {
+  ChevronRight,
+  Github,
+  Linkedin,
+  Download,
+  Phone,
+  Mail,
+  Menu,
+  X,
+} from "lucide-react";
+import { TriangleDownIcon } from "@radix-ui/react-icons";
+import Spline from "@splinetool/react-spline";
+import Link from "next/link";
+import { cn, scrollTo } from "@/lib/utils";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+import VanillaTilt from "vanilla-tilt";
+import { motion, AnimatePresence } from "framer-motion";
+
+// Project type — explicit so optional link keys compile cleanly
+type Project = {
+  title: string;
+  description: string;
+  githubhref?: string;
+  vidhref?: string;
+  href?: string;
+  paperHref?: string;
+  figmaHref?: string;
+  docHref?: string;
+};
+
+// Projects — titles, descriptions, and links synced with the resume
 const projects: Project[] = [
+  
+    
   {
     title:
       "InsightFlow-Your Intelligent Data Analysis Agent. From Files to Insights, Instantly",
@@ -49,15 +92,14 @@ const projects: Project[] = [
       "https://github.com/rux0422/IEEE-WCONF-24-Presentation-Health-Monitoring-System",
     paperHref: "https://ieeexplore.ieee.org/document/10692251",
   },
-  {
-    title:
+  title:
       "Onboarding and Authentication (statefarm.com) — Screen Designs (Figma)",
     description:
       "Four concept case studies: registration & onboarding, AI assistant & claims triage, dashboard, and coverage recommendations. Designed 23 mobile screens across 4 case studies in Figma, built on a reusable component library (variants, auto layout) grounded in statefarm.com's IA and brand. (Figma file and case study document below)",
     figmaHref:
       "https://www.figma.com/design/5ugk0W6wW69tKXiZ9rl4mw/Statefarm-UI-UX-Case-studies?node-id=1-2138",
-    docHref:
-      "https://drive.google.com/file/d/1Ji-fytONd6TNjmozQXJqcldzPLGnTaaG/view?usp=sharing",
+    
+    docHref: "https://drive.google.com/file/d/1Ji-fytONd6TNjmozQXJqcldzPLGnTaaG/view?usp=sharing",
   },
   {
     title: "UPI Payment App — Figma UI/UX Design Prototype",
@@ -78,3 +120,580 @@ const projects: Project[] = [
     githubhref: "https://github.com/rux0422/ScaleUp-App",
   },
 ];
+
+// Skills — synced with the resume's Technical Skills and Interests section
+const skills = [
+  "Figma",
+  "Wireframing",
+  "Design Systems",
+  "Responsive UI",
+  "Python",
+  "JavaScript",
+  "TypeScript",
+  "C++",
+  "Java",
+  "HTML",
+  "CSS",
+  "Node.js",
+  "React.js",
+  "Next.js",
+  "Playwright (E2E Testing)",
+  "Playwright MCP",
+  "AWS",
+  "Docker",
+  "CI/CD (Jenkins, GitLab)",
+  "Git",
+  "MySQL",
+  "Claude Code",
+  "Cursor",
+  "GitHub Copilot",
+  "AI/ML",
+  "Cloud computing",
+];
+
+// Experience — most recent first
+const experiences = [
+  {
+    company: "FrostyFlake (Curley Enterprises LLC)",
+    role: "Applied AI/ML Engineer (Contract)",
+    duration: "August 2026 - Present",
+    location: "Remote-Wyoming, USA",
+    description:
+      "Improving accuracy and generalization of FrostyFlake's AI-powered image-to-observation weather model on unseen camera imagery, with a focus on precipitation detection. Worked on quantized models and scene detection, prototyping scene-usability checks (indoor/outdoor, blur, occlusion, low light) and an observation-reliability output separating model confidence from image quality to support future data fusion.",
+  },
+  {
+    company: "Tangible Trade (Dezoir Tech Labs)",
+    role: "React developer",
+    duration: "November 2024 - December 2025",
+    location: "Remote-India",
+    description:
+      "Worked on developing various DeFi and Blockchain based applications using React. Implemented user-friendly dashboards and gamified experiences for trading and staking functionalities. Collaborated with blockchain developers to integrate smart contract functionality and integrated DeFi applications with wallet connections for transaction processing.",
+    experienceLetterHref:
+      "https://drive.google.com/file/d/1dv2MWMmrmW29Mlzo46PlmM2LVnticKst/view?usp=sharing",
+  },
+  {
+    company: "Innodatatics",
+    role: "Frontend developer Intern",
+    duration: "October 2024 - November 2024",
+    location: "Remote-India",
+    description:
+      "Worked on creating a HR portal that recruiters use to map interviewers with candidates based on skillset and time availability",
+  },
+  {
+    company: "Publicis Sapient",
+    role: "Associate Software Developer Intern",
+    duration: "June 2023 - July 2023",
+    location: "Remote-Bangalore, India",
+    description:
+      "Built and deployed a performance dashboard for Marriott Bonvoy Homes and Villas with automated URL extraction and reporting using Lighthouse and Puppeteer. Used AWS S3, DynamoDB for storage and React.js for frontend. The dashboard is automated with Jenkins and deployed via Docker",
+    certificateHref:
+      "https://drive.google.com/file/d/16rcxckfEGH6vRrqbRjkXnXezVat7CyS-/view?usp=sharing",
+  },
+];
+
+// New achievements data
+const achievements = [
+  {
+    title: "IEEE WCONF 24' Paper Presentation and Publication",
+    description:
+      "My paper titled: Health Monitoring System based on LightGBM, CatBoost and Explainable Boost Classifier was presented and published at the international IEEE conference, WCONF 24' The published paper can be viewed below.",
+    href: "https://ieeexplore.ieee.org/document/10692251",
+  },
+  {
+    title: "IEEE TENCON 24' Paper Presentation and Publication",
+    description:
+      "My paper titled: EcoCoin-An incentivised way to go Green using Amazon Rekognition was presented and published at the international IEEE conference, TENCON 24' The published paper can be viewed below.",
+    href: "https://ieeexplore.ieee.org/document/10902972",
+  },
+  {
+    title: "Kaggle Notebook Expert",
+    description:
+      "Became a Kaggle Notebook expert by utilising Machine Learning algorithms for performing predictive analysis on datasets.",
+    href: "https://www.kaggle.com/amruthasriram",
+  },
+  {
+    title: "Summer Analytics Course - IIT Guwahati",
+    description:
+      "Completed the Summer Analytics Course offered by the Consulting and Analytics Club of IIT Guwahati.",
+    href: "https://certificate.givemycertificate.com/c/8d13b576-9501-4a1a-b539-feda9298527b",
+  },
+];
+
+export default function Home() {
+  const refScrollContainer = useRef(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
+  const [current, setCurrent] = useState<number>(0);
+  const [count, setCount] = useState<number>(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // handle scroll
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    async function getLocomotive() {
+      const Locomotive = (await import("locomotive-scroll")).default;
+      new Locomotive({
+        el: refScrollContainer.current ?? new HTMLElement(),
+        smooth: true,
+      });
+    }
+
+    function handleScroll() {
+      let current = "";
+      setIsScrolled(window.scrollY > 0);
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 250) {
+          current = section.getAttribute("id") ?? "";
+        }
+      });
+
+      navLinks.forEach((li) => {
+        li.classList.remove("nav-active");
+
+        if (li.getAttribute("href") === #${current}) {
+          li.classList.add("nav-active");
+        }
+      });
+    }
+
+    void getLocomotive();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!carouselApi) return;
+
+    setCount(carouselApi.scrollSnapList().length);
+    setCurrent(carouselApi.selectedScrollSnap() + 1);
+
+    carouselApi.on("select", () => {
+      setCurrent(carouselApi.selectedScrollSnap() + 1);
+    });
+  }, [carouselApi]);
+
+  // card hover effect
+  useEffect(() => {
+    const tilt: HTMLElement[] = Array.from(document.querySelectorAll("#tilt"));
+    VanillaTilt.init(tilt, {
+      speed: 300,
+      glare: true,
+      "max-glare": 0.1,
+      gyroscope: true,
+      perspective: 900,
+      scale: 0.9,
+    });
+  }, []);
+
+  const handleNavClick = () => {
+    setMobileMenuOpen(false);
+  };
+
+  return (
+    <Container>
+      <div ref={refScrollContainer}>
+        <Gradient />
+
+        {/* Navigation Bar */}
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
+          <div className="container mx-auto px-4 sm:px-6 py-3">
+            <div className="flex items-center justify-between">
+              <div className="text-2xl font-bold">AS</div>
+
+              {/* Desktop Nav Links — hidden on mobile */}
+              <div className="hidden md:flex space-x-4">
+                <a href="#home" className="nav-link">Home</a>
+                <a href="#projects" className="nav-link">Projects</a>
+                <a href="#skills" className="nav-link">Skills</a>
+                <a href="#experience" className="nav-link">Experience</a>
+                <a href="#achievements" className="nav-link">Achievements</a>
+                <a href="#contact" className="nav-link">Contact</a>
+              </div>
+
+              {/* Mobile Hamburger Button — hidden on desktop */}
+              <button
+                className="md:hidden p-2 rounded-md focus:outline-none"
+                onClick={() => setMobileMenuOpen((prev) => !prev)}
+                aria-label="Toggle menu"
+              >
+                {mobileMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Dropdown Menu */}
+          <AnimatePresence>
+            {mobileMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.2 }}
+                className="md:hidden bg-background/95 backdrop-blur-sm border-t border-border overflow-hidden"
+              >
+                <div className="flex flex-col px-4 py-3 space-y-3">
+                  <a href="#home" className="nav-link py-2" onClick={handleNavClick}>Home</a>
+                  <a href="#projects" className="nav-link py-2" onClick={handleNavClick}>Projects</a>
+                  <a href="#skills" className="nav-link py-2" onClick={handleNavClick}>Skills</a>
+                  <a href="#experience" className="nav-link py-2" onClick={handleNavClick}>Experience</a>
+                  <a href="#achievements" className="nav-link py-2" onClick={handleNavClick}>Achievements</a>
+                  <a href="#contact" className="nav-link py-2" onClick={handleNavClick}>Contact</a>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </nav>
+
+        {/* Intro */}
+        <section
+          id="home"
+          data-scroll-section
+          className="mt-24 sm:mt-32 md:mt-40 flex w-full flex-col items-center xl:mt-0 xl:min-h-screen xl:flex-row xl:justify-between"
+        >
+          <div className={styles.intro}>
+            <div
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed=".09"
+              className="flex flex-row items-center space-x-1.5"
+            >
+              <Link href="https://github.com/rux0422?tab=repositories" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="icon">
+                  <Github className="h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="https://www.linkedin.com/in/amruthasriram/" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="icon">
+                  <Linkedin className="h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+            <div>
+              <h1
+                data-scroll
+                data-scroll-enable-touch-speed
+                data-scroll-speed=".06"
+                data-scroll-direction="horizontal"
+              >
+                <span className="text-4xl sm:text-5xl tracking-tighter text-foreground 2xl:text-8xl xl:text-6xl">
+                  Hello, I&apos;m
+                  <br />
+                </span>
+                <span className="clash-grotesk text-gradient text-4xl sm:text-5xl 2xl:text-8xl xl:text-6xl">
+                  Amruthavarshini Sriram.
+                </span>
+              </h1>
+              <p
+                data-scroll
+                data-scroll-enable-touch-speed
+                data-scroll-speed=".06"
+                className="mt-1 max-w-lg tracking-tight text-muted-foreground text-sm sm:text-base 2xl:text-xl"
+              >
+                AI/ML engineer with experience in computer vision, model
+                quantization and evaluation, and in building Generative and
+                Agentic AI applications (RAG, LLM agents). Background in
+                software engineering with Python, React.js and TypeScript,
+                along with working knowledge of end-to-end testing with
+                Playwright, IEEE-published ML research, a keen sense of UI/UX
+                design shown through Figma case studies, and an interest in
+                cloud computing.
+              </p>
+            </div>
+            <span
+              data-scroll
+              data-scroll-enable-touch-speed
+              data-scroll-speed=".06"
+              className="flex flex-row items-center space-x-1.5 pt-6"
+            >
+              <Button onClick={() => window.open("https://drive.google.com/file/d/1EjMnztMAZA9ZqN1kB__7m1InQWlr902R/view?usp=sharing")}>
+                Download Resume <Download className="ml-1 h-4 w-4" />
+              </Button>
+            </span>
+
+            <div
+              className={cn(
+                styles.scroll,
+                isScrolled && styles["scroll--hidden"]
+              )}
+            >
+              Scroll to discover{" "}
+              <TriangleDownIcon className="mt-1 animate-bounce" />
+            </div>
+          </div>
+          <div
+            data-scroll
+            data-scroll-speed="-.01"
+            id={styles["canvas-container"]}
+            className="mt-10 h-64 w-full sm:h-80 md:h-96 xl:mt-0 xl:h-full"
+          >
+            <Suspense fallback={<span>Loading...</span>}>
+              <Spline scene="/assets/scene.splinecode" />
+            </Suspense>
+          </div>
+        </section>
+
+        {/* Projects */}
+        <section id="projects" data-scroll-section>
+          <div className="my-16 sm:my-20">
+            <span className="text-gradient clash-grotesk text-sm font-semibold tracking-tighter">
+              ✨ Projects
+            </span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
+              Projects I Have Built
+            </h2>
+            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
+              Here are some of the projects I&apos;ve worked on:
+            </p>
+
+            <div className="mt-10 sm:mt-14 space-y-8">
+              {projects.map((project) => (
+                <div key={project.title}>
+                  <h3 className="text-xl sm:text-2xl font-semibold">{project.title}</h3>
+                  <p className="mt-1 text-base sm:text-lg text-muted-foreground">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {project.figmaHref && (
+                      <Link href={project.figmaHref} target="_blank" rel="noopener noreferrer">
+                        <Button size="sm" className="text-xs sm:text-sm">Figma File</Button>
+                      </Link>
+                    )}
+                    {project.docHref && (
+                      <Link href={project.docHref} target="_blank" rel="noopener noreferrer">
+                        <Button size="sm" className="text-xs sm:text-sm">Case Study Document</Button>
+                      </Link>
+                    )}
+                    {project.githubhref && (
+                      <Link href={project.githubhref} target="_blank" rel="noopener noreferrer">
+                        <Button size="sm" className="text-xs sm:text-sm">Source Code</Button>
+                      </Link>
+                    )}
+                    {project.vidhref && (
+                      <Link href={project.vidhref} target="_blank" rel="noopener noreferrer">
+                        <Button size="sm" className="text-xs sm:text-sm">Demo Video</Button>
+                      </Link>
+                    )}
+                    {project.href && (
+                      <Link href={project.href} target="_blank" rel="noopener noreferrer">
+                        <Button size="sm" className="text-xs sm:text-sm">Website</Button>
+                      </Link>
+                    )}
+                    {project.paperHref && (
+                      <Link href={project.paperHref} target="_blank" rel="noopener noreferrer">
+                        <Button size="sm" className="text-xs sm:text-sm">Read Paper</Button>
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Skills */}
+        <section id="skills" data-scroll-section>
+          <div className="my-24 sm:my-32 md:my-40 lg:my-64">
+            <span className="text-gradient clash-grotesk text-sm font-semibold tracking-tighter">
+              🚀 Skills
+            </span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
+              Tools and Technologies I&apos;ve Explored
+            </h2>
+            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
+              Here are some of the key tools, technologies and skills I&apos;ve worked on:
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
+              {skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full bg-primary/10 px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium text-primary"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Experience */}
+        <section id="experience" data-scroll-section>
+          <div className="my-24 sm:my-32 md:my-40 lg:my-64">
+            <span className="text-gradient clash-grotesk text-sm font-semibold tracking-tighter">
+              💼 Experience
+            </span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
+              My Professional Journey
+            </h2>
+            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
+              Here&apos;s a glimpse into my professional experience:
+            </p>
+
+            <div className="mt-8 space-y-6 sm:space-y-8">
+              {experiences.map((exp) => (
+                <div key={exp.company} className="rounded-lg bg-card p-4 sm:p-6 shadow-sm">
+                  <h3 className="text-xl sm:text-2xl font-semibold">{exp.company}</h3>
+                  <p className="text-base sm:text-lg font-medium text-primary">{exp.role}</p>
+                  <p className="text-sm text-muted-foreground">{exp.duration}</p>
+                  <p className="mt-2 text-sm sm:text-base">{exp.description}</p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {exp.certificateHref && (
+                      <Link href={exp.certificateHref} target="_blank" rel="noopener noreferrer">
+                        <Button size="sm" className="text-xs sm:text-sm">View Certificate</Button>
+                      </Link>
+                    )}
+                    {exp.experienceLetterHref && (
+                      <Link href={exp.experienceLetterHref} target="_blank" rel="noopener noreferrer">
+                        <Button size="sm" className="text-xs sm:text-sm">View Experience Letter</Button>
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Achievements */}
+        <section id="achievements" data-scroll-section>
+          <div className="my-24 sm:my-32 md:my-40 lg:my-64">
+            <span className="text-gradient clash-grotesk text-sm font-semibold tracking-tighter">
+              🏆 Achievements
+            </span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
+              Milestones and Recognitions
+            </h2>
+            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
+              Here are some of my notable achievements:
+            </p>
+
+            <div className="mt-8 space-y-6 sm:space-y-8">
+              {achievements.map((achievement) => (
+                <div key={achievement.title} className="rounded-lg bg-card p-4 sm:p-6 shadow-sm">
+                  <h3 className="text-xl sm:text-2xl font-semibold">{achievement.title}</h3>
+                  <p className="mt-2 text-sm sm:text-base">{achievement.description}</p>
+                  <Link href={achievement.href} target="_blank">
+                    <Button size="sm" className="mt-3 text-xs sm:text-sm">View Credential</Button>
+                  </Link>
+                </div>
+              ))}
+            </div>
+
+            {/* Updated Certifications Link */}
+            <div className="mt-16 sm:mt-24 md:mt-32 lg:mt-40">
+              <Link href="https://github.com/rux0422/Certifications" target="_blank">
+                <Button variant="default" className="w-full py-4 sm:py-6 text-base sm:text-lg font-semibold">
+                  View All Certifications
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Updated Contact Me Section */}
+        <section id="contact" data-scroll-section className="my-24 sm:my-32 md:my-40 lg:my-64">
+          <div
+            data-scroll
+            data-scroll-speed=".4"
+            data-scroll-position="top"
+            className="flex flex-col items-center justify-center rounded-lg bg-gradient-to-br from-primary/[6.5%] to-white/5 px-6 sm:px-8 py-12 sm:py-16 text-center xl:py-24"
+          >
+            <h2 className="text-2xl sm:text-3xl font-semibold mb-6">Contact Me</h2>
+            <div className="flex flex-col items-center space-y-4">
+              <Link href="tel:+13093074319" className="flex items-center text-sm sm:text-base">
+                <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                <span>+1 (309) 307-4319</span>
+              </Link>
+              <Link href="mailto:ruxstudent@gmail.com" className="flex items-center text-sm sm:text-base">
+                <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                <span>ruxstudent@gmail.com</span>
+              </Link>
+              <div className="flex space-x-2">
+                <Link href="https://github.com/rux0422?tab=repositories" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" size="icon">
+                    <Github className="h-4 w-4" />
+                  </Button>
+                </Link>
+                <Link href="https://www.linkedin.com/in/amruthasriram/" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" size="icon">
+                    <Linkedin className="h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </Container>
+  );
+}
+
+function Gradient() {
+  return (
+    <>
+      <div className="absolute -top-40 right-0 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+        <svg
+          className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
+          viewBox="0 0 1155 678"
+        >
+          <path
+            fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
+            fillOpacity=".1"
+            d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
+          />
+          <defs>
+            <linearGradient
+              id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533"
+              x1="1155.49"
+              x2="-78.208"
+              y1=".177"
+              y2="474.645"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#7980fe" />
+              <stop offset={1} stopColor="#f0fff7" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+        <svg
+          className="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
+          viewBox="0 0 1155 678"
+        >
+          <path
+            fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)"
+            fillOpacity=".1"
+            d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
+          />
+          <defs>
+            <linearGradient
+              id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc"
+              x1="1155.49"
+              x2="-78.208"
+              y1=".177"
+              y2="474.645"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#9A70FF" />
+              <stop offset={1} stopColor="#838aff" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </>
+  );
+} 
