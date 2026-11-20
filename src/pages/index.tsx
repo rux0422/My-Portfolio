@@ -151,22 +151,14 @@ const skills = [
   "Cloud computing",
 ];
 
+// Experience — most recent first
 const experiences = [
   {
-    company: "Publicis Sapient",
-    role: "Associate Software Developer Intern",
-    duration: "June 2023 - July 2023",
+    company: "FrostyFlake (Curley Enterprises LLC)",
+    role: "Applied AI/ML Engineer (Contract)",
+    duration: "August 2026 - Present",
     description:
-      "Built and deployed a performance dashboard for Marriott Bonvoy Homes and Villas with automated URL extraction and reporting using Lighthouse and Puppeteer. Used AWS S3, DynamoDB for storage and React.js for frontend. The dashboard is automated with Jenkins and deployed via Docker",
-    certificateHref:
-      "https://drive.google.com/file/d/16rcxckfEGH6vRrqbRjkXnXezVat7CyS-/view?usp=sharing",
-  },
-  {
-    company: "Innodatatics",
-    role: "Frontend developer Intern",
-    duration: "October 2024 - November 2024",
-    description:
-      "Worked on creating a HR portal that recruiters use to map interviewers with candidates based on skillset and time availability",
+      "Improving accuracy and generalization of FrostyFlake's AI-powered image-to-observation weather model on unseen camera imagery, with a focus on precipitation detection. Worked on quantized models and scene detection, prototyping scene-usability checks (indoor/outdoor, blur, occlusion, low light) and an observation-reliability output separating model confidence from image quality to support future data fusion.",
   },
   {
     company: "Tangible Trade (Dezoir Tech Labs)",
@@ -176,6 +168,22 @@ const experiences = [
       "Worked on developing various DeFi and Blockchain based applications using React. Implemented user-friendly dashboards and gamified experiences for trading and staking functionalities. Collaborated with blockchain developers to integrate smart contract functionality and integrated DeFi applications with wallet connections for transaction processing.",
     experienceLetterHref:
       "https://drive.google.com/file/d/1dv2MWMmrmW29Mlzo46PlmM2LVnticKst/view?usp=sharing",
+  },
+  {
+    company: "Innodatatics",
+    role: "Frontend developer Intern",
+    duration: "October 2024 - November 2024",
+    description:
+      "Worked on creating a HR portal that recruiters use to map interviewers with candidates based on skillset and time availability",
+  },
+  {
+    company: "Publicis Sapient",
+    role: "Associate Software Developer Intern",
+    duration: "June 2023 - July 2023",
+    description:
+      "Built and deployed a performance dashboard for Marriott Bonvoy Homes and Villas with automated URL extraction and reporting using Lighthouse and Puppeteer. Used AWS S3, DynamoDB for storage and React.js for frontend. The dashboard is automated with Jenkins and deployed via Docker",
+    certificateHref:
+      "https://drive.google.com/file/d/16rcxckfEGH6vRrqbRjkXnXezVat7CyS-/view?usp=sharing",
   },
 ];
 
@@ -388,15 +396,14 @@ export default function Home() {
                 data-scroll-speed=".06"
                 className="mt-1 max-w-lg tracking-tight text-muted-foreground text-sm sm:text-base 2xl:text-xl"
               >
-                Software engineer and UI/UX designer with a foundation in
-                frontend development (React.js, Typescript, Javascript) and
-                hands-on experience designing customer-facing dashboards and
-                AI-integrated applications. Strong aesthetics and creativity
-                in UI design to enrich UX. Strong focus in building highly
-                functional applications using emerging technologies with a
-                deep interest in Generative and Agentic AI, ML, cloud
-                computing and software testing using Playwright and Playwright
-                MCP server.
+                AI/ML engineer with experience in computer vision, model
+                quantization and evaluation, and in building Generative and
+                Agentic AI applications (RAG, LLM agents). Background in
+                software engineering with Python, React.js and TypeScript,
+                along with working knowledge of end-to-end testing with
+                Playwright, IEEE-published ML research, a keen sense of UI/UX
+                design shown through Figma case studies, and an interest in
+                cloud computing.
               </p>
             </div>
             <span
