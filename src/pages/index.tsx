@@ -42,22 +42,7 @@ type Project = {
 // Projects — titles, descriptions, and links synced with the resume
 const projects: Project[] = [
   {
-    title:
-      "Onboarding and Authentication (statefarm.com) — Screen Designs (Figma)",
-    description:
-      "Four concept case studies: registration & onboarding, AI assistant & claims triage, dashboard, and coverage recommendations. Designed 23 mobile screens across 4 case studies in Figma, built on a reusable component library (variants, auto layout) grounded in statefarm.com's IA and brand. (Figma file and case study document below)",
-    figmaHref:
-      "https://www.figma.com/design/5ugk0W6wW69tKXiZ9rl4mw/Statefarm-UI-UX-Case-studies?node-id=1-2138",
     
-    docHref: "https://drive.google.com/file/d/1Ji-fytONd6TNjmozQXJqcldzPLGnTaaG/view?usp=sharing",
-  },
-  {
-    title: "UPI Payment App — Figma UI/UX Design Prototype",
-    description:
-      "Designed mobile UI screens and payment flows in Figma for a UPI payment application prototype. (Figma file below)",
-    figmaHref:
-      "https://www.figma.com/design/sTySzEg8nsa1Jd7GTfQOav/Untitled?node-id=0-1",
-  },
   {
     title:
       "InsightFlow-Your Intelligent Data Analysis Agent. From Files to Insights, Instantly",
@@ -108,6 +93,22 @@ const projects: Project[] = [
       "https://github.com/rux0422/IEEE-WCONF-24-Presentation-Health-Monitoring-System",
     paperHref: "https://ieeexplore.ieee.org/document/10692251",
   },
+  title:
+      "Onboarding and Authentication (statefarm.com) — Screen Designs (Figma)",
+    description:
+      "Four concept case studies: registration & onboarding, AI assistant & claims triage, dashboard, and coverage recommendations. Designed 23 mobile screens across 4 case studies in Figma, built on a reusable component library (variants, auto layout) grounded in statefarm.com's IA and brand. (Figma file and case study document below)",
+    figmaHref:
+      "https://www.figma.com/design/5ugk0W6wW69tKXiZ9rl4mw/Statefarm-UI-UX-Case-studies?node-id=1-2138",
+    
+    docHref: "https://drive.google.com/file/d/1Ji-fytONd6TNjmozQXJqcldzPLGnTaaG/view?usp=sharing",
+  },
+  {
+    title: "UPI Payment App — Figma UI/UX Design Prototype",
+    description:
+      "Designed mobile UI screens and payment flows in Figma for a UPI payment application prototype. (Figma file below)",
+    figmaHref:
+      "https://www.figma.com/design/sTySzEg8nsa1Jd7GTfQOav/Untitled?node-id=0-1",
+  },
   {
     title: "Airbnb Homepage Replica",
     description:
@@ -157,6 +158,7 @@ const experiences = [
     company: "FrostyFlake (Curley Enterprises LLC)",
     role: "Applied AI/ML Engineer (Contract)",
     duration: "August 2026 - Present",
+    location: "Remote-Wyoming, USA",
     description:
       "Improving accuracy and generalization of FrostyFlake's AI-powered image-to-observation weather model on unseen camera imagery, with a focus on precipitation detection. Worked on quantized models and scene detection, prototyping scene-usability checks (indoor/outdoor, blur, occlusion, low light) and an observation-reliability output separating model confidence from image quality to support future data fusion.",
   },
@@ -164,6 +166,7 @@ const experiences = [
     company: "Tangible Trade (Dezoir Tech Labs)",
     role: "React developer",
     duration: "November 2024 - December 2025",
+    location: "Remote-India",
     description:
       "Worked on developing various DeFi and Blockchain based applications using React. Implemented user-friendly dashboards and gamified experiences for trading and staking functionalities. Collaborated with blockchain developers to integrate smart contract functionality and integrated DeFi applications with wallet connections for transaction processing.",
     experienceLetterHref:
@@ -173,6 +176,7 @@ const experiences = [
     company: "Innodatatics",
     role: "Frontend developer Intern",
     duration: "October 2024 - November 2024",
+    location: "Remote-India",
     description:
       "Worked on creating a HR portal that recruiters use to map interviewers with candidates based on skillset and time availability",
   },
@@ -180,6 +184,7 @@ const experiences = [
     company: "Publicis Sapient",
     role: "Associate Software Developer Intern",
     duration: "June 2023 - July 2023",
+    location: "Remote-Bangalore, India",
     description:
       "Built and deployed a performance dashboard for Marriott Bonvoy Homes and Villas with automated URL extraction and reporting using Lighthouse and Puppeteer. Used AWS S3, DynamoDB for storage and React.js for frontend. The dashboard is automated with Jenkins and deployed via Docker",
     certificateHref:
