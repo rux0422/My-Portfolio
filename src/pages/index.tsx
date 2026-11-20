@@ -150,6 +150,8 @@ const skills = [
   "Cursor",
   "GitHub Copilot",
   "AI/ML",
+  "Image Models",
+  "Quantized ML Models",
   "Cloud computing",
 ];
 
