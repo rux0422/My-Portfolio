@@ -147,6 +147,7 @@ const skills = [
   "Git",
   "MySQL",
   "Claude Code",
+  "Codex",
   "Cursor",
   "GitHub Copilot",
   "AI/ML",
